@@ -103,7 +103,7 @@ $("#btn-getData").click(() => {
     var params = {val:'mastery_level'};
     $.ajax({
         type:'GET',
-        url:'http://127.0.0.1:3000/mastery_level',
+        url:'https://canvas-demo-cg.herokuapp.com/mastery_level',
         data: JSON.stringify(params),
         processData: false,
         contentType: 'application/json',
