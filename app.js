@@ -1,9 +1,3 @@
-const getAssignment = require("./api/getAssignment");
-const getCourse = require("./api/getCourse");
-const getRubrics = require("./api/getRubrics");
-const getSkills = require("./api/getSkills");
-const getUser = require("./api/getUser");
-
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -16,6 +10,12 @@ app.listen(process.env.PORT || expressPort, ()=>{
 app.use('/public', express.static(`${__dirname}/public/`));
 app.use('/api', express.static(`${__dirname}/api/`));
 app.use(cors());
+
+const getAssignment = require(`${__dirname}/api/getAssignment`);
+const getCourse = require(`${__dirname}/api/getCourse`);
+const getRubrics = require(`${__dirname}/api/getRubrics`);
+const getSkills = require(`${__dirname}/api/getSkills`);
+const getUser = require(`${__dirname}/api/getUser`);
 
 app.get('/', (req, res, next) => {
     res.sendFile(`${__dirname}/public/index.html`);
