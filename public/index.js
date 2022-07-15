@@ -116,10 +116,10 @@ $("#btn-getData").click(() => {
             $('#container').append('<h3>Student '+element['student']['id'] + ': ' +element['student']['name']+'</h3>')
             var skillset = ["Communication","Apply Acquisition Principles","Critical Thinking & Problem Solving",'Ethics',"Team-Building"];
             skillset.forEach((skill, index) => {
-                $('#container').append('<p>Mastery rate for skill '+skill + ': ' + element['mastery_level'][index].toFixed(4)+'</p>')
-                var id = element['student']['name'].split(" ")[0]+index
+                $('#container').append('<p>Mastery rate for skill '+skill + ': ' + element['mastery_level'][index+1].toFixed(3)+'</p>')
+                var id = element['student']['name'].split(" ")[0]+(index+1)
                 $('#container').append("<svg id="+id+"></svg>")
-                dataset = getData(element['distribution'][index]);
+                dataset = getData(element['distribution'][index+1]);
                 create_support_viz(dataset, id);
             })
         });
