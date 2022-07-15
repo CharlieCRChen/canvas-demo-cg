@@ -90,7 +90,7 @@ async function processing(){
             });
             // console.log('===========================')
             // console.log("student "+student['id']+': '+student['name'])
-            var skillset = [1,2,4]
+            var skillset = [1,2,3,4,5]
             var dist = {}
             skillset.forEach(s =>{
                 var d = getNumCount(validBySkill(s+'', result_agg));
