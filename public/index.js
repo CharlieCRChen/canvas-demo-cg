@@ -114,7 +114,7 @@ $("#btn-getData").click(() => {
         $('#container').empty()
         ret.forEach(element => {
             $('#container').append('<h3>Student '+element['student']['id'] + ': ' +element['student']['name']+'</h3>')
-            var skillset = [1,2,4];
+            var skillset = ["Communication","Apply Acquisition Principles","Critical Thinking & Problem Solving",'Ethics',"Team-Building"];
             skillset.forEach(skill => {
                 $('#container').append('<p>Mastery rate for skill '+skill + ': ' + element['mastery_level'][skill].toFixed(4)+'</p>')
                 var id = element['student']['name'].split(" ")[0]+skill
