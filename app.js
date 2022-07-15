@@ -9,7 +9,7 @@ const cors = require("cors");
 const app = express();
 const expressPort = 3000;
 
-app.listen(expressPort, ()=>{
+app.listen(process.env.PORT || expressPort, ()=>{
     console.log("listening on 127.0.0.1:" + expressPort);
 })
 
