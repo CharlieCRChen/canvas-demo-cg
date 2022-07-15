@@ -14,6 +14,7 @@ app.listen(process.env.PORT || expressPort, ()=>{
 })
 
 app.use('/public', express.static(`${__dirname}/public/`));
+app.use('/api', express.static(`${__dirname}/api/`));
 app.use(cors());
 
 app.get('/', (req, res, next) => {
