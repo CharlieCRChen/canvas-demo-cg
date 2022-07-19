@@ -8,6 +8,7 @@ app.listen(process.env.PORT || expressPort, ()=>{
 })
 
 app.use('/public', express.static(`${__dirname}/public/`));
+app.use('/asset', express.static(`${__dirname}/asset/`));
 app.use(cors());
 
 const getAssignment = require(`${__dirname}/api/getAssignment`);
@@ -18,6 +19,10 @@ const getUser = require(`${__dirname}/api/getUser`);
 
 app.get('/', (req, res, next) => {
     res.sendFile(`${__dirname}/public/index.html`);
+})
+
+app.get('/instruction', (req, res, next) => {
+    res.sendFile(`${__dirname}/public/instructional_designer_dashboard.html`);
 })
 
 app.get('/mastery_level', (req, res, next) => {

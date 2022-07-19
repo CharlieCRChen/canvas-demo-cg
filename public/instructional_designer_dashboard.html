@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <head>
+        <script src="//d3js.org/d3.v4.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="public/instructional_designer_dashboard.css">
+        <title>Instructional Designer Dashboard</title>
+    </head>
+
+    <body>
+        <div id="nav-container">
+            <p id="main-title">Learner Insights</p>
+            <div class="nav-switch" id="skill">Skill Mastery</div>
+            <div class="nav-switch" id="impact">Impact Evaluation</div>
+        </div>
+
+        <div id="bar-container">
+            <p id="mastery-level-main-title">Cohort Mastery Level</p>
+            <div id="skill-set"></div>
+        </div>
+
+        <div id="detail-container">
+            <div id="no-skill-selected">
+                <img src="asset/no-skill.png">
+                <p id="no-skill-selected-title">No Skill Selected Yet</p>
+                <p id="no-skill-selected-content">Please select a skill on the left panel to view <br/> related instructional activities</p>
+            </div>
+
+            <div id="select-skill">
+                <div id="detail-annotation">
+                    <div id="detail">
+                        <div id="detail-title">Communication</div>
+                        <svg id="detail-svg">
+                            <rect x="0" y="0" width="100%" height="100%" fill="#ccc"></rect>
+                        </svg>
+                    </div>
+        
+                    <div id="annotation">
+                        <div id="title-sub-score">
+                            <div id="title-sub">
+                                <p id="annotation-title">Average Mastery:</p>
+                                <p id="annotation-sub">Mastery Threshold is 80%</p>
+                            </div>
+                            <p id="annotation-score">86</p>
+                        </div>
+        
+                        <div id="mastery-level-group">
+                            <div class="mastery-level" id="highest-mastery-level">
+                                <div class="mastery-level-score" id="highest-mastery-level-score">93%</div>
+                                <p>Highest Mastery Level</p>
+                            </div>
+            
+                            <div class="mastery-level" id="lowest-mastery-level">
+                                <div class="mastery-level-score" id="lowest-mastery-level-score">78%</div>
+                                <p>Lowest Mastery Level</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="activities">
+                    <div id="activities-title">
+                        <p>Related Activities</p>
+                        <p></p>
+                        <p>Due Time</p>
+                        <p>Average Student Score</p>
+                    </div>
+                    <div id="activities-set"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="public/instructional_designer_dashboard.js"></script>
+    </body>
+</html>

@@ -1,0 +1,386 @@
+body {
+    font-family: 'Lato';
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      'header header header header header header header header header header header header'
+      'bar bar bar detail detail detail detail detail detail detail detail detail';
+    grid-column-gap: 1.25rem;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    margin:0;
+}
+
+/* header */
+
+#nav-container {
+    grid-area: header;
+    height: 2.73rem;
+
+    border-bottom: 2px solid #D6D6D6;
+    filter: drop-shadow(0px 4px 6px rgba(104, 104, 104, 0.15));
+}
+
+#main-title {
+    font-weight: 600;
+    font-size: 2rem;
+    display: inline;
+    margin-right: 2.5rem;
+}
+
+.nav-switch {
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration:none;
+    display: inline;
+    margin-right: 2.5rem;
+    cursor: pointer;
+}
+
+#skill {
+    color: #8C1A11;
+    padding-bottom: 0.5rem;
+}
+
+#impact {
+    color: black;
+    padding-bottom: 0.5rem;
+}
+
+/* bar */
+
+#bar-container{
+    grid-area: bar;
+    width: 330px;
+    background-color: #F7F8FA;
+    border-right: 1px solid #D6D6D6;
+}
+
+#mastery-level-main-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+#skill-set{
+    cursor: pointer;
+}
+
+#skill-set p {
+    margin: 0;
+}
+
+.component-container{
+    padding: 1rem 0.15rem 1rem 0.15rem;
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    align-self: stretch;
+}
+
+.title-viz{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: none;
+    order: 0;
+    flex-grow:1;
+    gap: 0.25rem;
+}
+
+.component-title{
+    font-weight: 600;
+    font-size:1.125rem;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.component-viz{
+    width:15rem;
+    height:1.3125rem;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.label-score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.label-mastered{
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #fff;
+    background: rgba(0, 96, 56, 0.6);
+    border-radius: 4px;
+    padding: 2px 4px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.label-not-mastered{
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #fff;
+    background: #B14E46;
+    border-radius: 4px;
+    padding: 2px 4px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.score-mastered{
+    font-weight: 600;
+    font-size: 1.5rem;
+    float: right;
+    color: rgba(0, 96, 56, 0.6);
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.score-not-mastered{
+    font-weight: 600;
+    font-size: 1.5rem;
+    float: right;
+    color: #B14E46;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;    
+}
+
+/* detail */
+
+#detail-container{
+    grid-area: detail;
+}
+
+    /* no skill select */
+
+img{
+    width: 25rem;
+    display:block;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+#no-skill-selected-title{
+    font-weight: 600;
+    font-size: 1.875rem;
+    color: #B14E46;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+}
+
+#no-skill-selected-content{
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    color: #565656;
+    margin: 0;
+}
+
+    /* skill select */
+#detail-annotation{
+    grid-area: detail;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+
+    margin-top: 1.25rem;
+}
+
+#detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right:1.25rem;
+}
+
+#detail-title{
+    font-weight: 600;
+    font-size: 1.875rem;
+    color:#313131;
+    margin-bottom: 1rem;
+}
+
+#detail-svg{
+    width: 33.125rem;
+    height: 2.4375rem;
+}
+
+#annotation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 0.5rem;
+}
+
+#annotation p{
+    margin: 0;
+}
+
+#title-sub-score{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 0.125rem;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+    width: 329px;
+}
+
+#title-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 0.125rem;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+#annotation-title{
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #565656;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#annotation-sub{
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #8C8888;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#annotation-score{
+    font-weight: 600;
+    font-size: 1.875rem;
+    color: #006038; 
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#mastery-level-group{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 0.5rem;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.mastery-level{
+    box-sizing: border-box;
+    background: #F7F8FA;
+    border: 1px solid #D6D6D6;
+    border-radius: 0.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+}
+
+.mastery-level p{
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #565656;
+}
+
+.mastery-level-score{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#highest-mastery-level{
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#lowest-mastery-level{
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#activities{
+    margin-top: 1.875rem;
+}
+
+#activities-title{
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #565656;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 0 0.25rem;
+    gap: 22px;
+
+    border-bottom: 1px solid #8C8888;
+    filter: drop-shadow(0px 1px 4px rgba(63, 63, 63, 0.25));
+    
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    justify-content: space-between;
+    min-width: 880px;
+}
+
+#activities-title p{
+    margin: 0;
+}
