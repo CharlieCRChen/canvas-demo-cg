@@ -138,14 +138,14 @@ function barComponentInteraction(id, skill, mastered, score){
                 $(".mastery-level-score").css("color","#8C1A11");
             }
         }
-        else{
-            $(select_skill_id).css("background","");
-            $(select_skill_id).css("box-shadow","");
-            select_skill_id = '';
+        // else{
+        //     $(select_skill_id).css("background","");
+        //     $(select_skill_id).css("box-shadow","");
+        //     select_skill_id = '';
 
-            $("#no-skill-selected").show();
-            $("#select-skill").hide();
-        }
+        //     $("#no-skill-selected").show();
+        //     $("#select-skill").hide();
+        // }
     })
 }
 
@@ -153,3 +153,26 @@ function setBarContainerHeight(){
     var height = $( window ).height() - 20 - $('#nav-container').height();
     $('#bar-container').css('height', height);
 }
+
+function createActivityComponent(index, name, type, due_time, score,max_score){
+    $("#activities-set").append("<div class='activity-component' id='activity-component-"+index+"'></div>")
+    $("#activity-component-"+index).append("<div class='icon-type-name' id='icon-type-name-"+index+"'></div>")
+
+    $("#icon-type-name-"+index).append("<div class='type-name' id='type-name-"+index+"'></div>")
+    $("#type-name-"+index).append("<div class='activity-type' id='type-"+index+"'>"+type+"</div>")
+    $("#type-name-"+index).append("<div class='activity-name' id='name-"+index+"'>"+name+"</div>")
+
+    $("#activity-component-"+index).append("<p class='activity-placeholder'></p>")
+
+    $("#activity-component-"+index).append("<p class='activity-time' id='time-"+index+"'>"+due_time+"</p>")
+    $("#activity-component-"+index).append("<p class='activity-score' id='score-"+index+"'>"+score+"/"+max_score+"</p>")
+}
+
+createActivityComponent(1, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
+createActivityComponent(2, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
+createActivityComponent(3, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
+createActivityComponent(4, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
+createActivityComponent(5, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
+createActivityComponent(6, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
+createActivityComponent(7, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
+
