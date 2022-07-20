@@ -158,6 +158,8 @@ function createActivityComponent(index, name, type, due_time, score,max_score){
     $("#activities-set").append("<div class='activity-component' id='activity-component-"+index+"'></div>")
     $("#activity-component-"+index).append("<div class='icon-type-name' id='icon-type-name-"+index+"'></div>")
 
+    activityComponentInteraction("#activity-component-"+index);
+
     $("#icon-type-name-"+index).append("<div class='type-name' id='type-name-"+index+"'></div>")
     $("#type-name-"+index).append("<div class='activity-type' id='type-"+index+"'>"+type+"</div>")
     $("#type-name-"+index).append("<div class='activity-name' id='name-"+index+"'>"+name+"</div>")
@@ -176,3 +178,16 @@ createActivityComponent(5, "The Acquisition Life Cycle", "Knowledge Check", "Jul
 createActivityComponent(6, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
 createActivityComponent(7, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
 
+function activityComponentInteraction(id){
+    $(id).mouseover(()=>{
+        $(id).css("background","#FFFFFF");
+        $(id).css("box-shadow","2px 4px 12px rgba(114, 114, 114, 0.25)");
+    })
+
+    $(id).mouseout(()=>{
+        if (select_skill_id != id){
+            $(id).css("background","");
+            $(id).css("box-shadow","");
+        }
+    })
+}
