@@ -2,6 +2,7 @@ var select_page = "skill";
 var select_skill_id="";
 var select_skill = "";
 var example_index = 0;
+var current_page = ""
 var rubrics = [
     {name: "Purpose", avg:1, max:2, content:"The content of the email suggests a clear understanding of the purpose of the written communication. The content, tone, and structure of the email are tailored to meet the purpose. The intent is clearly conveyed in the email."},
     {name: "Audience", avg:3, max:5, content:"Clearly understands who their audience is and crafts content, tone, and structure of the email based on their relationship with the audience. Takes on the role of a colleague to address needs of their colleague (their target audience)"},
@@ -49,8 +50,10 @@ $(document).ready(()=>{
     //write it to session storage later
     $("#no-skill-selected").show();
     $("#select-skill").hide();
-
     $('#skill-mastery-activity-detail').hide();
+    $("#impact-evaluation-main").hide();
+
+    current_page = "skill-mastery-main";
 })
 
 $( window ).resize(function() {
@@ -88,8 +91,11 @@ function navInteraction(){
     
         select_page = "skill";
 
-        $("#bar-container").show()
-        $("#detail-container").show()
+        // $("#bar-container").show()
+        // $("#detail-container").show()
+        $("#"+current_page).show();
+        $("#impact-evaluation-main").hide();
+
     })
     
     $("#impact").click(()=>{
@@ -101,8 +107,10 @@ function navInteraction(){
     
         select_page = "impact";
 
-        $("#bar-container").hide()
-        $("#detail-container").hide()
+        // $("#bar-container").hide()
+        // $("#detail-container").hide()
+        $("#"+current_page).hide();
+        $("#impact-evaluation-main").show();
     })
 }
 
@@ -259,6 +267,7 @@ function activityComponentInteraction(id, name, type){
             $("#skill-mastery-main").hide();
             $("#skill-mastery-activity-detail").show();
             updateActivityDetailPA(select_skill, name, rubrics, examples);
+            current_page = "skill-mastery-activity-detail";
         }
     })   
 }
@@ -308,6 +317,7 @@ $("#example-set-right-arrow").click(()=> {
 $("#detail-nav-skill-name").click(()=>{
     $("#skill-mastery-main").show();
     $('#skill-mastery-activity-detail').hide();
+    current_page = "skill-mastery-main";
 })
 $("#detail-nav-origin").click(()=>{
     $("#skill-mastery-main").show();
@@ -318,6 +328,7 @@ $("#detail-nav-origin").click(()=>{
     $("#no-skill-selected").show();
     $("#select-skill").hide();
     $('#skill-mastery-activity-detail').hide();
+    current_page = "skill-mastery-main";
 })
 
 function updateExampleCard(examples, example_index){
@@ -345,4 +356,20 @@ function updateActivityDetailKC(skill, activity, question_num){
     $("#detail-nav-skill-name").text(skill);
     $("#detail-title-type").text("Practice Activity");
     $("#detail-title-name").text(activity);
+}
+
+
+function expand_annotation(id, src){
+    var list = src.split("/");
+    var img = list.pop();
+    if (img == "open.png"){
+        $("#"+id).attr("src", "asset/close.png");
+        $("#right-body").show();
+        $("#impact-main-grid-right").height(125);
+    }
+    else{
+        $("#"+id).attr("src", "asset/open.png");
+        $("#right-body").hide();
+        $("#impact-main-grid-right").height(24);
+    }
 }

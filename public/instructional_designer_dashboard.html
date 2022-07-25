@@ -148,6 +148,52 @@
             </div>
         </div>
 
+        <div id="impact-evaluation-main">
+            <div id="impact-main-title">impact of activity</div>
+            <div id="impact-main-grid-left">
+                <div id="impact-nav-col">
+                    
+                    <div id="impact-nav-col-left">
+                        <div id="nav-col-version">
+                            <div class="nav-col-title" id="nav-col-version-title">Choose a version</div>
+                            <select name="version" id="nav-col-version-control">
+                                <option value="1">Version 1</option>
+                                <option value="2">Version 2</option>
+                            </select>
+                        </div>
+                        <div id="nav-col-group">
+                            <div class="nav-col-title" id="nav-col-group-title">Group by</div>
+                            <div id="nav-col-group-control">
+                                <div class="control-unselected" id="group-control-left">Skill</div>
+                                <div class="control-selected" id="group-control-right">Activity</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="nav-col-sort">
+                        <div class="nav-col-title" id="nav-col-sort-title">Sort by</div>
+                        <div id="nav-col-sort-control">
+                            <img src="asset/bi_sort-up.png">
+                            <img src="asset/bi_sort-down.png">
+                        </div>
+                    </div>
+
+                </div>
+                <div id="expand-collapse">
+                    <div>Expand All</div>
+                    <div>Collapse All</div>
+                </div>
+                <div id="activity-set"></div>
+            </div>
+            
+            <div id="impact-main-grid-right">
+                <div id="right-top">
+                    <div id="right-title">What is Impact Score?</div>
+                    <img id="right-expand" onclick="expand_annotation(this.id, this.src)" src="asset/open.png">
+                </div>
+                <div id="right-body">The Impact Score is calculated by the contribution of instructional activities to the improvement of a certain skill. To be specific, the improvement after an instructional activity will be the difference in score between this activity and the next activity that assesses the same skill.</div>
+            </div>
+        </div>
 
         <script src="public/instructional_designer_dashboard.js"></script>
     </body>
