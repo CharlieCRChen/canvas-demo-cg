@@ -1,14 +1,21 @@
 body {
     font-family: 'Lato';
     font-style: normal;
+    margin:0;
+    /* height: 100%;
+    overflow: hidden; */
+    padding: 1.25rem 1.25rem 0 1.25rem;
+
+    min-width: 1214px;
+}
+
+#skill-mastery-main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
       'header header header header header header header header header header header header'
       'bar bar bar detail detail detail detail detail detail detail detail detail';
     grid-column-gap: 1.25rem;
-    padding: 1.25rem 1.25rem 0 1.25rem;
-    margin:0;
 }
 
 /* header */
@@ -136,7 +143,7 @@ body {
     font-weight: 400;
     font-size: 0.75rem;
     color: #fff;
-    background: #B14E46;
+    background: #D60E0E;
     border-radius: 4px;
     padding: 2px 4px;
 
@@ -350,32 +357,43 @@ img{
     flex-grow: 0;
 }
 
+/* activities */
+
 #activities{
     margin-top: 1.875rem;
+    display: grid;
+    grid-column-gap: 0.25rem;
+}
+
+#activities-set{
+    overflow: scroll;
 }
 
 #activities-title{
     font-weight: 400;
     font-size: 0.875rem;
     color: #565656;
+    display: grid;
 
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0 0 0.25rem;
-    gap: 161px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:'activity activity activity activity time score';
 
     border-bottom: 1px solid #8C8888;
     filter: drop-shadow(0px 1px 4px rgba(63, 63, 63, 0.25));
-    
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-
-    /* justify-content: space-between; */
     min-width: 880px;
+}
+
+#activities-title-related-ac {
+    grid-area: activity;
+}
+
+#activities-title-time {
+    grid-area: time;
+}
+
+#activities-title-related-ac {
+    grid-area: score;
+    text-align: right;
 }
 
 #activities-title p{
@@ -385,40 +403,36 @@ img{
 /* activity component */
 
 .activity-component{
-
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0.5rem 0;
-    gap: 184px;
-
     border-bottom: 1px solid #D6D6D6;
-
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-
-    justify-content: space-between;
+    display: grid;
     min-width: 880px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:'activity activity activity activity time score';
+    cursor: pointer;
 }
 
-.activity-placeholder{
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
 
 .icon-type-name{
+    align-items: center;
+    padding: 4px 10px 4px 7px;
+    grid-area: activity;
+    margin: 8px 0;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 4px 10px 4px 7px;
-    gap: 13px;
+    gap: 0.8rem;
+}
+
+.activity-icon{
+    width: 1.125rem;
+    margin:0;
+
     flex: none;
     order: 0;
-    flex-grow: 1;
+    flex-grow: 0;
 }
 
 .type-name{
@@ -443,8 +457,6 @@ img{
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-
-    /* width: 591px; */
 }
 
 .activity-name{
@@ -456,7 +468,6 @@ img{
     order: 1;
     align-self: stretch;
     flex-grow: 0;
-    /* width: 591px; */
 }
 
 #activities-set p{
@@ -467,14 +478,412 @@ img{
 }
 
 .activity-time{
+    grid-area: time;
+}
+
+.activity-score{
+    text-align: right;
+    grid-area: score;
+}
+
+
+
+
+
+
+/* skill-mastery-activity-detail */
+#skill-mastery-activity-detail {
+    margin: 12px 24px 24px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+    'nav nav nav nav nav nav nav nav nav nav nav nav '
+    'header header header header header header header header empty empty empty empty'
+    'contents contents contents contents contents contents contents contents placeholder side side side';
+}
+
+/* nav */
+#detail-nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 18px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+
+#detail-nav-origin{
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    color: #8C1A11;
+    cursor: pointer;
+}
+
+#detail-nav-arrow1{
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    width: 6px;
+    margin:0;
+}
+
+#detail-nav-skill-name{
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    color: #8C1A11;
+    cursor: pointer;
+}
+
+#detail-nav-arrow2{
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    width: 6px;
+    margin:0;
+}
+
+#detail-nav-text{
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    color: #313131;
+}
+
+/* title */
+#detail-title{
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px;
+    margin-bottom: 18px;
+}
+
+#type-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#detail-title-type{
+    font-weight: 600;
+    font-size: 18px;
+    color: #565656;
+    text-transform: uppercase;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#detail-title-name{
+    font-weight: 600;
+    font-size: 30px;
+    color: #313131;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#detail-title-bar{
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#detail-content-practice-activity{
+    grid-area: contents;
+}
+
+.detail-section-title{
+    font-weight: 600;
+    font-size: 18px;
+    color: #8C1A11;
+    text-transform: uppercase;
+}
+
+
+/* detail-side */
+#detail-side-practice-activity{
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+}
+
+#detail-side-learning-objective{
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#detail-side-learning-objective-list{
+    font-weight: 500;
+    font-size: 16px;
+    color: #313131;
+}
+
+#detail-side-learning-objective-assignment{
+    box-sizing: border-box;
+    padding: 4px 10px;
+
+    display: inline-block;
+
+    border: 1px solid #B14E46;
+    border-radius: 4px;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    color: #8C1A11;
+}
+
+
+#detail-side-related-instruction{
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+}
+
+#related-instruction-title{
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.related-instruction-component {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #8C8888;
+    border-radius: 4px;
+
+    align-self: stretch;
+    cursor: pointer;
+}
+
+.related-instruction-component img{
+    width: 18px;
+    height: 20px;
+    margin:0;
+    flex: none;
+    order: 0;
+
+}
+
+#related-instruction-component-1{
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+#related-instruction-component-2{
+    flex: none;
+    order: 2;
+    flex-grow: 1;
+}
+
+#detail-side-related-skills{
     flex: none;
     order: 2;
     flex-grow: 0;
 }
 
-.activity-score{
+#detail-side-related-skills li{
+    cursor: pointer;
+}
+
+/* rubric component  */
+#rubrics-set{
+    margin-top:4px;
+    margin-bottom:24px;
+}
+
+.comb-rubric-component{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:'left right';
+    grid-column-gap: 15px;
+    margin-bottom: 12px;
+}
+
+
+.rubric-component{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        'title title title score'
+        'content content content content';
+    box-sizing: border-box;
+    padding: 4px 0px 6px;
+    gap: 4px;
+}
+
+.rubric-component-title{
+    grid-area: title;
+    font-weight: 600;
+    font-size: 16px;
+    color: #313131;
+
+}
+
+.rubric-component-score{
+    grid-area: score;
+    font-weight: 600;
+    font-size: 16px;
+    color: #313131;
     text-align: right;
+}
+
+.rubric-component-content{
+    grid-area: content;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #565656;
+}
+
+/* example card */
+#example-set{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    margin: 12px 0;
+}
+
+#example-set img{
+    margin:0;
+    width:6px;
+    height:12px;
+    cursor: pointer;
+}
+
+#example-set-card{
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        'score content content content content content';
+    grid-column-gap: 20px;
+
+    padding: 20px;
+    /* gap: 20px; */
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6D6D6;
+
+    box-shadow: 0px 4px 6px rgba(104, 104, 104, 0.15);
+    border-radius: 8px;
+}
+
+#title-total-score{
+    display:flex;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: 4px 0px;
+    gap: 8px;
+}
+
+#card-scores{
+    grid-area: score;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    border-radius: 4px;
+
     flex: none;
-    order: 3;
+    order: 0;
+    align-self: stretch;
     flex-grow: 0;
 }
+
+#card-title{
+    font-weight: 600;
+    font-size: 16px;
+
+    display: flex;
+    align-items: flex-end;
+    color: #8C1A11;
+}
+
+#card-total-score{
+    font-weight: 600;
+    font-size: 16px;
+
+    display: flex;
+    align-items: flex-end;
+    color: #8C1A11;
+}
+
+#card-detail-score{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #313131;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+}
+
+.card-rubric-pair{
+    display:flex;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: 4px 0px;
+    gap: 8px;
+}
+
+#card-text{
+    grid-area: content;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #313131;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+}
+

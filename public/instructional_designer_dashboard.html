@@ -15,63 +15,139 @@
             <div class="nav-switch" id="skill">Skill Mastery</div>
             <div class="nav-switch" id="impact">Impact Evaluation</div>
         </div>
+        
+        <div id="skill-mastery-main">
 
-        <div id="bar-container">
-            <p id="mastery-level-main-title">Cohort Mastery Level</p>
-            <div id="skill-set"></div>
-        </div>
-
-        <div id="detail-container">
-            <div id="no-skill-selected">
-                <img src="asset/no-skill.png">
-                <p id="no-skill-selected-title">No Skill Selected Yet</p>
-                <p id="no-skill-selected-content">Please select a skill on the left panel to view <br/> related instructional activities</p>
+            <div id="bar-container">
+                <p id="mastery-level-main-title">Cohort Mastery Level</p>
+                <div id="skill-set"></div>
             </div>
 
-            <div id="select-skill">
-                <div id="detail-annotation">
-                    <div id="detail">
-                        <div id="detail-title">Communication</div>
-                        <svg id="detail-svg">
-                            <rect x="0" y="0" width="100%" height="100%" fill="#ccc"></rect>
-                        </svg>
-                    </div>
-        
-                    <div id="annotation">
-                        <div id="title-sub-score">
-                            <div id="title-sub">
-                                <p id="annotation-title">Average Mastery:</p>
-                                <p id="annotation-sub">Mastery Threshold is 80%</p>
-                            </div>
-                            <p id="annotation-score">86</p>
+            <div id="detail-container">
+                <div id="no-skill-selected">
+                    <img src="asset/no-skill.png">
+                    <p id="no-skill-selected-title">No Skill Selected Yet</p>
+                    <p id="no-skill-selected-content">Please select a skill on the left panel to view <br/> related instructional activities</p>
+                </div>
+
+                <div id="select-skill">
+                    <div id="detail-annotation">
+                        <div id="detail">
+                            <div id="detail-title">Communication</div>
+                            <svg id="detail-svg">
+                                <rect x="0" y="0" width="100%" height="100%" fill="#ccc"></rect>
+                            </svg>
                         </div>
-        
-                        <div id="mastery-level-group">
-                            <div class="mastery-level" id="highest-mastery-level">
-                                <div class="mastery-level-score" id="highest-mastery-level-score">93%</div>
-                                <p>Highest Mastery Level</p>
+            
+                        <div id="annotation">
+                            <div id="title-sub-score">
+                                <div id="title-sub">
+                                    <p id="annotation-title">Average Mastery:</p>
+                                    <p id="annotation-sub">Mastery Threshold is 80%</p>
+                                </div>
+                                <p id="annotation-score">86</p>
                             </div>
             
-                            <div class="mastery-level" id="lowest-mastery-level">
-                                <div class="mastery-level-score" id="lowest-mastery-level-score">78%</div>
-                                <p>Lowest Mastery Level</p>
+                            <div id="mastery-level-group">
+                                <div class="mastery-level" id="highest-mastery-level">
+                                    <div class="mastery-level-score" id="highest-mastery-level-score">93%</div>
+                                    <p>Highest Mastery Level</p>
+                                </div>
+                
+                                <div class="mastery-level" id="lowest-mastery-level">
+                                    <div class="mastery-level-score" id="lowest-mastery-level-score">78%</div>
+                                    <p>Lowest Mastery Level</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div id="activities">
-                    <div id="activities-title">
-                        <p>Related Activities</p>
-                        <p></p>
-                        <p></p>
-                        <p>Due Time</p>
-                        <p>Average Student Score</p>
+        
+                    <div id="activities">
+                        <div id="activities-title">
+                            <p id="activities-title-related-ac">Related Activities</p>
+                            <p id="activities-title-time">Due Time</p>
+                            <p id="activities-title-score">Average Student Score</p>
+                        </div>
+                        <div id="activities-set"></div>
                     </div>
-                    <div id="activities-set"></div>
                 </div>
             </div>
         </div>
+
+        <div id="skill-mastery-activity-detail">
+            <div id="detail-nav">
+                <div id="detail-nav-origin">Skill</div>
+                <img id="detail-nav-arrow1" src="asset/arrow.png">
+                <div id="detail-nav-skill-name">Communication</div>
+                <img id="detail-nav-arrow2" src="asset/arrow.png">
+                <div id="detail-nav-text">Activity Detail</div>
+            </div>
+            <div id="detail-title">
+                <div id="type-name">
+                    <div id="detail-title-type">Knowledge Check</div>
+                    <div id="detail-title-name">The Acquisition Lifecycle</div>
+                </div>
+                <svg width="310px" height="44px" id="detail-title-bar">
+                    <rect width="310px" height="44px" fill="#ccc"></rect>
+                </svg>
+            </div>
+
+
+            <div id="detail-content-practice-activity">
+                <div class="detail-section-title">rubrics</div>
+                <div id="rubrics-set"></div>
+                
+                <div class="detail-section-title">Example Responses by students</div>
+                <div id="example-set">
+                    <img id="example-set-left-arrow" src="asset/left-arrow.png">
+                    
+                    <div id="example-set-card">
+                        <div id="card-scores">
+                            <div id="title-total-score">
+                                <div id="card-title">Score</div>
+                                <div id="card-total-score"></div>
+                            </div>
+                            <div id="card-detail-score"></div>
+                        </div>                        
+                        <div id="card-text"></div>
+                    </div>
+                    
+                    <img id="example-set-right-arrow" src="asset/arrow.png">
+                </div>
+            </div>
+
+
+            <div id="detail-side-practice-activity">
+                <div id="detail-side-learning-objective">
+                    <div class="detail-section-title">Learning Objectives</div>
+                    <ul id="detail-side-learning-objective-list">
+                        <li>
+                            Communicate and persuade up, down, and across chains of authority to successfully gain support for creative and effective solutions.
+                        </li>
+                    </ul>
+                    <div id="detail-side-learning-objective-assignment">Go to Assignment Page</div>
+                </div>
+                <div id="detail-side-related-instruction">
+                    <div id="related-instruction-title" class="detail-section-title">Related instructions</div>
+                    <div id="related-instruction-component-1" class="related-instruction-component">
+                        <img src="asset/related-instruction.png">
+                        <div>Effective Communication Practices</div>
+                    </div>
+                    <div id="related-instruction-component-2" class="related-instruction-component">
+                        <img src="asset/related-instruction.png">
+                        <div>Communication throughout the Acquisition Life Cycle</div>
+                    </div>
+                </div>
+                <div id="detail-side-related-skills">
+                    <div class="detail-section-title">Related skills</div>
+                    <ul>
+                        <li>Apply Principles</li>
+                        <li>Critical Thinking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
 
         <script src="public/instructional_designer_dashboard.js"></script>
     </body>
