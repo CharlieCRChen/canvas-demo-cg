@@ -2,7 +2,8 @@ var select_page = "skill";
 var select_skill_id="";
 var select_skill = "";
 var example_index = 0;
-var current_page = ""
+var current_page = "";
+
 var rubrics = [
     {name: "Purpose", avg:1, max:2, content:"The content of the email suggests a clear understanding of the purpose of the written communication. The content, tone, and structure of the email are tailored to meet the purpose. The intent is clearly conveyed in the email."},
     {name: "Audience", avg:3, max:5, content:"Clearly understands who their audience is and crafts content, tone, and structure of the email based on their relationship with the audience. Takes on the role of a colleague to address needs of their colleague (their target audience)"},
@@ -41,6 +42,21 @@ var examples = [
         content:"This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity"
     },
 ];
+
+
+
+var impact_skill_data = [
+    
+]
+
+
+
+
+
+
+
+
+
 
 $(document).ready(()=>{
     $("#skill").css("border-bottom", "3px solid #8C1A11");
@@ -365,7 +381,10 @@ function expand_annotation(id, src){
     if (img == "open.png"){
         $("#"+id).attr("src", "asset/close.png");
         $("#right-body").show();
-        $("#impact-main-grid-right").height(125);
+        $("#impact-main-grid-right").height($("#right-body").height()+36);
+        $( window ).resize(function() {
+            $("#impact-main-grid-right").height($("#right-body").height()+36);
+        })
     }
     else{
         $("#"+id).attr("src", "asset/open.png");
@@ -373,3 +392,178 @@ function expand_annotation(id, src){
         $("#impact-main-grid-right").height(24);
     }
 }
+
+var impact_activity_data = [
+    {
+        name: "Discussion Board",
+        total: 106,
+        skill:[
+            {name: "Communication", score: 24 },
+            {name: "Team Building", score: 22},
+            {name: "Apply Principles", score: 26},
+            {name: "Ethics", score: 20},
+            {name: "Critical Thinking", score: 14},
+        ],
+        insights:[
+            "Discussion board is the most effective activity considering the impact on all kinds of skills",
+            "Discussion board is most effective for cultivating Apply Principles skill."
+        ]
+    },
+    {
+        name: "Practice Activity",
+        total: 94,
+        skill:[
+            {name: "Communication", score: 21 },
+            {name: "Team Building", score: 19},
+            {name: "Apply Principles", score: 14},
+            {name: "Ethics", score: 13},
+            {name: "Critical Thinking", score: 27},
+        ],
+        insights:[
+            "Practice Activity is most effective for cultivating Critical Thinking skill."
+        ]
+    },
+    {   
+        name: "Reflection",
+        total: 87,
+        skill:[
+            {name: "Communication", score: 15 },
+            {name: "Team Building", score: 18},
+            {name: "Apply Principles", score: 20},
+            {name: "Ethics", score: 16},
+            {name: "Critical Thinking", score: 18},
+        ],
+        insights:[
+            "Reflection is most effective for cultivating Apply Principles skill."
+        ]
+    },
+    {   
+        name: "Knowledge Check",
+        total: 80,
+        skill:[
+            {name: "Communication", score:  22},
+            {name: "Team Building", score: 18 },
+            {name: "Apply Principles", score: 14},
+            {name: "Ethics", score: 13},
+            {name: "Critical Thinking", score: 13},
+        ],
+        insights:[
+            "Knowledge Check is most effective for cultivating Communication skill."
+        ]
+    }
+]
+
+
+function addImpactActivityComponent(index, data){
+    $("#activity-set").append("<div id='impact-component-"+index+"'></div>");
+    $("#impact-component-"+index).append("<div class='impact-component-top' id='impact-component-top-"+index+"'></div>")
+    $("#impact-component-top-"+index).append("<div class='impact-component-title' id='impact-component-title-"+index+"'>"+data[index-1].name+"</div>")
+    $("#impact-component-top-"+index).append("<div class='impact-component-total-arrow' id='impact-component-total-arrow-"+index+"'></div>")
+
+    $("#impact-component-"+index).append("<div class='impact-component-bottom' id='impact-component-bottom-"+index+"'></div>")
+    $("#impact-component-bottom-"+index).append("<div class='impact-component-skills' id='impact-component-skills-"+index+"'></div>")
+    $("#impact-component-skills-"+index).append("<div class='impact-component-skills-title'>Impact on Each Skill</div>")
+    
+    $("#impact-component-skills-"+index).append("<div class='impact-component-skills-left-right' id='impact-component-skills-left-right-"+index+"'></div>")
+    $("#impact-component-skills-left-right-"+index).append("<div class='impact-component-skills-left' id='impact-component-skills-left-"+index+"'></div>")
+    $("#impact-component-skills-left-right-"+index).append("<div class='impact-component-skills-right' id='impact-component-skills-right-"+index+"'></div>")
+
+    var total=0;
+    data[index-1].skill.forEach((element,i) => {
+        if (i<data[index-1].skill.length /2){
+            $("#impact-component-skills-left-"+index).append("<div class='skills-name-score' id='skills-name-score-"+index+"-"+i+"'></div>")
+        }
+        else{
+            $("#impact-component-skills-right-"+index).append("<div class='skills-name-score' id='skills-name-score-"+index+"-"+i+"'></div>")
+        }
+        $("#skills-name-score-"+index+"-"+i).append("<div class='impact-component-skills-name'>"+element.name+"</div>")
+        $("#skills-name-score-"+index+"-"+i).append("<div class='impact-component-skills-score'>"+element.score+"</div>")
+        total += element.score;
+    })
+
+    $("#impact-component-total-arrow-"+index).append("<div class='impact-component-total' id='impact-component-total-"+index+"'>Overall Impact: "+total+"</div>")
+    $("#impact-component-total-arrow-"+index).append("<img class='impact-component-control' onclick='expandOrCollapse("+index+", this.id, this.src)' id='impact-component-control-"+index+"' src='asset/up-arrow.png'>")
+
+    $("#impact-component-bottom-"+index).append("<div class='impact-component-insights' id='impact-component-insights-"+index+"'></div>")
+    $("#impact-component-insights-"+index).append("<div class='impact-component-insights-title'>INSIGHTS</div>")
+    $("#impact-component-insights-"+index).append("<ul class='impact-component-insights-list' id='impact-component-insights-list-"+index+"'></ul>")
+    data[index-1].insights.forEach(element => {
+        $("#impact-component-insights-list-"+index).append("<li>"+element+"</li>")
+    })
+
+    $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+    $( window ).resize(function() {
+        $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+    })
+
+    $("#impact-component-bottom-"+index).hide();
+}
+
+var new_impact_activity_data = impact_activity_data.slice(0);
+new_impact_activity_data.sort(function(a, b) {
+    return b.total - a.total
+});
+new_impact_activity_data.forEach((e,i)=>{
+    addImpactActivityComponent(i+1, new_impact_activity_data)
+})
+
+function expandOrCollapse(index, id, src){
+    //impact-component-control-
+    var list = src.split("/");
+    var img = list.pop();
+    if (img == "up-arrow.png"){
+        $("#"+id).attr("src", "asset/down-arrow.png");
+        $("#impact-component-bottom-"+index).show();
+    }
+    else{
+        $("#"+id).attr("src", "asset/up-arrow.png");
+        $("#impact-component-bottom-"+index).hide();
+    }
+    $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+}
+
+
+var state="collapse";
+$("#expand-all").click(()=>{
+    $(".impact-component-bottom").show();
+    state="expand";
+})
+
+$("#collapse-all").click(()=>{
+    $(".impact-component-bottom").hide();
+    state="collapse";
+})
+
+$("#sort-up").click(()=>{
+    $("#sort-up").attr("src", "asset/bi_sort-up-select.png")
+    $("#sort-down").attr("src", "asset/bi_sort-down-unselect.png")
+
+    $("#activity-set").empty();
+    var new_impact_activity_data = impact_activity_data.slice(0);
+    new_impact_activity_data.sort(function(a, b) {
+        return a.total - b.total;
+    });
+    new_impact_activity_data.forEach((e,i)=>{
+        addImpactActivityComponent(i+1, new_impact_activity_data)
+    })
+    if (state=='expand'){
+        $(".impact-component-bottom").show();
+    }
+})
+
+$("#sort-down").click(()=>{
+    $("#sort-up").attr("src", "asset/bi_sort-up-unselect.png")
+    $("#sort-down").attr("src", "asset/bi_sort-down-select.png")
+
+    $("#activity-set").empty();
+    var new_impact_activity_data = impact_activity_data.slice(0);
+    new_impact_activity_data.sort(function(a, b) {
+        return b.total - a.total;
+    });
+    new_impact_activity_data.forEach((e,i)=>{
+        addImpactActivityComponent(i+1, new_impact_activity_data)
+    })   
+    if (state=='expand'){
+        $(".impact-component-bottom").show();
+    }
+})

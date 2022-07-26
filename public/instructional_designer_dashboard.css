@@ -1016,6 +1016,7 @@ img{
     width: 36px;
     box-shadow: 0px 4px 6px rgba(104, 104, 104, 0.15);
     border-radius: 4px;
+    cursor: pointer;
 }
 
 #expand-collapse{
@@ -1026,6 +1027,8 @@ img{
 
     display: flex;
     gap:24px;
+
+    margin-bottom:8px;
 }
 
 #expand-collapse div{
@@ -1074,4 +1077,195 @@ img{
     color: #565656;
     order: 1;
     display: none;
+}
+
+
+/* impact component */
+.impact-component-top{
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 20px;
+    gap: 10px;
+
+    background: rgba(140, 26, 17, 0.1);
+
+    border-left: 3px solid #8C1A11;
+    box-shadow: 0px 1px 4px rgba(140, 26, 17, 0.15);
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.impact-component-title{
+    font-weight: 600;
+    font-size: 18px;
+    color: #8C1A11;
+}
+
+.impact-component-total-arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+}
+
+.impact-component-total{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #565656;
+}
+
+.impact-component-top img{
+    margin:0;
+    width: 24px;
+    cursor: pointer;
+}
+
+.impact-component-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 20px 0px 0px;
+    gap: 28px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 6px rgba(104, 104, 104, 0.15);
+    border-radius: 8px;
+}
+
+
+/* impact-skill */
+.impact-component-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    justify-content: space-between;
+
+    margin: 16px 0 20px 0;
+}
+
+.impact-component-skills-title{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #565656;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 0px 20px;
+}
+
+.impact-component-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 20px 0px 0px;
+    gap: 28px;
+}
+
+.impact-component-skills-left-right{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 28px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.impact-component-skills-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.impact-component-skills-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.skills-name-score{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 0 20px;
+    gap: 8px;
+}
+
+.impact-component-skills-name{
+    font-weight: 600;
+    font-size: 16px;
+    color: #313131;
+    width: 173px;
+}
+
+.impact-component-skills-score{
+    font-weight: 600;
+    font-size: 16px;
+    color: #8C1A11;
+}
+
+
+/* impact-insight  */
+.impact-component-insights{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    gap: 10px;
+
+
+    background: #F4F4F4;
+    border-radius: 6px;
+
+    flex: none;
+    order: 1;
+
+    margin: 16px 0 20px 0;
+}
+
+.impact-component-insights-title{
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #565656;
+}
+
+.impact-component-insights-list{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #313131;
 }
