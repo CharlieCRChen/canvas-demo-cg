@@ -3,6 +3,8 @@ var select_skill_id="";
 var select_skill = "";
 var example_index = 0;
 var current_page = "";
+var impact_page = "activity"
+var order = "down"
 
 var rubrics = [
     {name: "Purpose", avg:1, max:2, content:"The content of the email suggests a clear understanding of the purpose of the written communication. The content, tone, and structure of the email are tailored to meet the purpose. The intent is clearly conveyed in the email."},
@@ -43,11 +45,6 @@ var examples = [
     },
 ];
 
-
-
-var impact_skill_data = [
-    
-]
 
 
 
@@ -393,6 +390,8 @@ function expand_annotation(id, src){
     }
 }
 
+//impact activity 
+
 var impact_activity_data = [
     {
         name: "Discussion Board",
@@ -535,34 +534,230 @@ $("#collapse-all").click(()=>{
 })
 
 $("#sort-up").click(()=>{
+    order = "up"
     $("#sort-up").attr("src", "asset/bi_sort-up-select.png")
     $("#sort-down").attr("src", "asset/bi_sort-down-unselect.png")
 
     $("#activity-set").empty();
-    var new_impact_activity_data = impact_activity_data.slice(0);
-    new_impact_activity_data.sort(function(a, b) {
-        return a.total - b.total;
-    });
-    new_impact_activity_data.forEach((e,i)=>{
-        addImpactActivityComponent(i+1, new_impact_activity_data)
-    })
+    if (impact_page == "activity"){
+        var new_impact_activity_data = impact_activity_data.slice(0);
+        new_impact_activity_data.sort(function(a, b) {
+            return a.total - b.total;
+        });
+        new_impact_activity_data.forEach((e,i)=>{
+            addImpactActivityComponent(i+1, new_impact_activity_data)
+        })
+    }
+    else{
+        var new_impact_skill_data = impact_skill_data.slice(0);
+        new_impact_skill_data.sort(function(a, b) {
+            return a.total - b.total;
+        });
+        new_impact_skill_data.forEach((e,i)=>{
+            addImpactSkillComponent(i+1, new_impact_skill_data)
+        })
+    }
+
     if (state=='expand'){
         $(".impact-component-bottom").show();
     }
 })
 
 $("#sort-down").click(()=>{
+    order = "down"
     $("#sort-up").attr("src", "asset/bi_sort-up-unselect.png")
     $("#sort-down").attr("src", "asset/bi_sort-down-select.png")
 
     $("#activity-set").empty();
+    if (impact_page == "activity"){
+        var new_impact_activity_data = impact_activity_data.slice(0);
+        new_impact_activity_data.sort(function(a, b) {
+            return b.total - a.total;
+        });
+        new_impact_activity_data.forEach((e,i)=>{
+            addImpactActivityComponent(i+1, new_impact_activity_data)
+        })   
+    }
+    else{
+        var new_impact_skill_data = impact_skill_data.slice(0);
+        new_impact_skill_data.sort(function(a, b) {
+            return b.total - a.total;
+        });
+        new_impact_skill_data.forEach((e,i)=>{
+            addImpactSkillComponent(i+1, new_impact_skill_data)
+        })
+    }
+    if (state=='expand'){
+        $(".impact-component-bottom").show();
+    }
+})
+
+
+//impact skill
+var impact_skill_data = [
+    {
+        name: "Communication",
+        total: 106,
+        activity:[
+            {name: "Discussion Board", score: 34 },
+            {name: "Practice Activity", score: 28},
+            {name: "Reflection", score: 26},
+            {name: "Knowledge Check", score: 18},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Team-building",
+        total: 94,
+        activity:[
+            {name: "Discussion Board", score: 26 },
+            {name: "Practice Activity", score: 24},
+            {name: "Reflection", score: 23},
+            {name: "Knowledge Check", score: 21},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Ethics",
+        total: 89,
+        activity:[
+            {name: "Discussion Board", score: 30 },
+            {name: "Practice Activity", score: 22},
+            {name: "Reflection", score: 19},
+            {name: "Knowledge Check", score: 18},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Apply Principles",
+        total: 84,
+        activity:[
+            {name: "Discussion Board", score: 29 },
+            {name: "Practice Activity", score: 21},
+            {name: "Reflection", score: 20},
+            {name: "Knowledge Check", score: 14},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Critical Thinking",
+        total: 79,
+        activity:[
+            {name: "Discussion Board", score: 26 },
+            {name: "Practice Activity", score: 24},
+            {name: "Reflection", score: 19},
+            {name: "Knowledge Check", score: 10},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    }
+]
+
+function addImpactSkillComponent(index, data){
+    $("#activity-set").append("<div id='impact-component-"+index+"'></div>");
+    $("#impact-component-"+index).append("<div class='impact-component-top' id='impact-component-top-"+index+"'></div>")
+    $("#impact-component-top-"+index).append("<div class='impact-component-title' id='impact-component-title-"+index+"'>"+data[index-1].name+"</div>")
+    $("#impact-component-top-"+index).append("<div class='impact-component-total-arrow' id='impact-component-total-arrow-"+index+"'></div>")
+
+    $("#impact-component-"+index).append("<div class='impact-component-bottom' id='impact-component-bottom-"+index+"'></div>")
+    $("#impact-component-bottom-"+index).append("<div class='impact-component-skills' id='impact-component-skills-"+index+"'></div>")
+    $("#impact-component-skills-"+index).append("<div class='impact-component-skills-title'>Contribution of Each Activity</div>")
+
+    $("#impact-component-skills-"+index).append("<div class='impact-component-skills-activity-svg' id='impact-component-skills-activity-svg-"+index+"'></div>")
+    $("#impact-component-skills-activity-svg-"+index).append("<div class='impact-component-activity' id='impact-component-activity-"+index+"'></div>")
+    $("#impact-component-skills-activity-svg-"+index).append("<div class='impact-component-svg' id='impact-component-svg-"+index+"'></div>")
+
+    var total=0;
+    var colorList=["#8C1A11", "rgba(140, 26, 17, 0.6)", "rgba(140, 26, 17, 0.4)", "rgba(140, 26, 17, 0.2)"];
+    data[index-1].activity.forEach((element,i) => {
+        $("#impact-component-activity-"+index).append("<div class='color-name-score' id='color-name-score-"+index+"-"+i+"'></div>")
+        $("#color-name-score-"+index+"-"+i).append("<div class='color-name' id='color-name-"+index+"-"+i+"'></div>")
+        $("#color-name-"+index+"-"+i).append("<svg><rect class='impact-component-activities-color' id='impact-component-activities-color-"+index+"-"+i+"'></rect></svg>")
+
+        $("#impact-component-activities-color-"+index+"-"+i).attr("fill", colorList[i])
+
+        $("#color-name-"+index+"-"+i).append("<div class='impact-component-activities-name'>"+element.name+"</div>")
+        $("#color-name-score-"+index+"-"+i).append("<div class='impact-component-activities-score'>"+element.score+"</div>")
+        total += element.score;
+    })
+
+    // $("#impact-component-svg-"+index).attr("color","#ccc")
+
+    $("#impact-component-total-arrow-"+index).append("<div class='impact-component-total' id='impact-component-total-"+index+"'>Overall Improvement: "+total+"</div>")
+    $("#impact-component-total-arrow-"+index).append("<img class='impact-component-control' onclick='expandOrCollapse("+index+", this.id, this.src)' id='impact-component-control-"+index+"' src='asset/up-arrow.png'>")
+
+    $("#impact-component-bottom-"+index).append("<div class='impact-component-insights' id='impact-component-insights-"+index+"'></div>")
+    $("#impact-component-insights-"+index).append("<div class='impact-component-insights-title'>INSIGHTS</div>")
+    $("#impact-component-insights-"+index).append("<ul class='impact-component-insights-list' id='impact-component-insights-list-"+index+"'></ul>")
+    data[index-1].insights.forEach(element => {
+        $("#impact-component-insights-list-"+index).append("<li>"+element+"</li>")
+    })
+
+    $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+    $(".impact-component-insights").height(190)
+    $( window ).resize(function() {
+        $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+        $(".impact-component-insights").height($("#impact-component-skills").height())
+    })
+
+    $("#impact-component-bottom-"+index).hide();
+}
+
+$("#group-control-left").click(()=>{
+    $("#group-control-left").removeClass("control-unselected");
+    $("#group-control-left").addClass("control-selected");
+
+    $("#group-control-right").addClass("control-unselected");
+    $("#group-control-right").removeClass("control-selected");
+
+    impact_page = "skill"
+
+    $("#activity-set").empty();
+    var new_impact_skill_data = impact_skill_data.slice(0);
+    new_impact_skill_data.sort(function(a, b) {
+        if (order=='down'){return b.total - a.total}
+        else{return a.total - b.total}
+    });
+    new_impact_skill_data.forEach((e,i)=>{
+        addImpactSkillComponent(i+1, new_impact_skill_data)
+    })
+    if (state=='expand'){
+        $(".impact-component-bottom").show();
+    }
+})
+
+$("#group-control-right").click(()=>{
+    $("#group-control-left").removeClass("control-selected");
+    $("#group-control-left").addClass("control-unselected");
+
+    $("#group-control-right").addClass("control-selected");
+    $("#group-control-right").removeClass("control-unselected");
+
+    impact_page = "activity";
+
+    $("#activity-set").empty();
     var new_impact_activity_data = impact_activity_data.slice(0);
     new_impact_activity_data.sort(function(a, b) {
-        return b.total - a.total;
+        if (order=='down'){return b.total - a.total}
+        else{return a.total - b.total}
     });
     new_impact_activity_data.forEach((e,i)=>{
         addImpactActivityComponent(i+1, new_impact_activity_data)
-    })   
+    })
     if (state=='expand'){
         $(".impact-component-bottom").show();
     }
