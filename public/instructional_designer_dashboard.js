@@ -456,6 +456,8 @@ function updateActivityDetailKC(skill, name){
     $("#detail-title-type").text("Knowledge check");
     $("#detail-title-name").text(name);
 
+    $("#knowledge-check-questions").empty();
+
     question.forEach((element,i) => {
         $("#knowledge-check-questions").append("<div class='question-component' id='question-component-"+i+"'></div>");
         $("#question-component-"+i).append("<div class='question-component-top' id='question-component-top-"+i+"'></div>")
