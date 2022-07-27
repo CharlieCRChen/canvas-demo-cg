@@ -499,7 +499,9 @@ img{
     grid-template-areas:
     'nav nav nav nav nav nav nav nav nav nav nav nav '
     'header header header header header header header header empty empty empty empty'
-    'contents contents contents contents contents contents contents contents placeholder side side side';
+    'contents contents contents contents contents contents contents contents placeholder side side side'
+    'leftKC leftKC leftKC leftKC leftKC leftKC leftKC leftKC rightKC rightKC rightKC rightKC';
+    grid-column-gap: 20px;
 }
 
 /* nav */
@@ -608,6 +610,10 @@ img{
     grid-area: contents;
 }
 
+#detail-content-knowledge-check{
+    grid-area: leftKC;
+}
+
 .detail-section-title{
     font-weight: 600;
     font-size: 18px;
@@ -624,6 +630,10 @@ img{
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
+}
+
+#detail-side-knowledge-check{
+    grid-area: rightKC;
 }
 
 #detail-side-learning-objective{
@@ -887,6 +897,271 @@ img{
     align-self: stretch;
     flex-grow: 1;
 }
+
+
+
+/* knowledge check activity detail  */
+
+#knowledge-check-expand-collapse{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8C1A11;
+
+    display: flex;
+    gap:24px;
+
+    margin-bottom:8px;
+}
+
+#knowledge-check-expand-collapse div{
+    cursor: pointer;
+}
+
+/* knowledge check questions  */
+.question-component-top{
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 10px 20px;
+    gap: 10px;
+    justify-content: space-between;
+
+    background: rgba(140, 26, 17, 0.1);
+
+    border-left: 3px solid #8C1A11;
+    box-shadow: 0px 1px 4px rgba(140, 26, 17, 0.15);
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.knowledge-check-question{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #8C1A11;
+}
+
+.knowledge-check-type{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #470D00;
+}
+
+.question-type{
+    display:flex;
+    flex-direction: row;
+    gap:26px;
+    align-items: center;
+}
+
+.knowledge-check-score{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #8C1A11;
+}
+
+.knowledge-check-arrow{
+    margin:0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.score-arrow{
+    display:flex;
+    flex-direction: row;
+    gap:16px;
+    align-items: center;
+}
+
+.question-component-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 20px;
+    gap: 8px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 6px rgba(104, 104, 104, 0.15);
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.question-component-bottom{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    gap:28px;
+}
+
+.question-component-bottom-left-right{
+    display: flex;
+    flex-direction: row;
+    gap:148px;
+}
+
+.res-list{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.res-name-num{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.question-component-bottom-right{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.question-q{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #313131;
+}
+
+.kc-block-title{
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #565656;
+    margin-bottom: 4px;
+}
+
+.res-name{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #313131;
+    width:396px;
+}
+
+.kc-block-score{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8C1A11;
+}
+
+
+
+/* knowledge check side  */
+.index-block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 12px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 6px rgba(104, 104, 104, 0.15);
+    border-radius: 8px;
+
+    margin-bottom:24px;
+}
+
+.index-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    gap: 12px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.index-top img{
+    margin:0;
+    width:20px;
+    cursor: pointer;
+}
+
+.index-title{
+    font-weight: 600;
+    font-size: 16px;
+    color: #313131;
+}
+
+.index-body{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #565656;
+    display: none;
+}
+
+#skill-rubric-title{
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #8C1A11;
+    margin-bottom: 4px;
+}
+
+.skill-rubric-blocks{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 20px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.skill-rubric-block-name-score{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #313131;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    margin-bottom: 4px;
+}
+
+.skill-rubric-block-content{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #565656;
+}
+
 
 
 

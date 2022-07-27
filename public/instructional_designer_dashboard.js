@@ -3,8 +3,9 @@ var select_skill_id="";
 var select_skill = "";
 var example_index = 0;
 var current_page = "";
-var impact_page = "activity"
-var order = "down"
+var impact_page = "activity";
+var order = "down";
+var state="collapse";
 
 var rubrics = [
     {name: "Purpose", avg:1, max:2, content:"The content of the email suggests a clear understanding of the purpose of the written communication. The content, tone, and structure of the email are tailored to meet the purpose. The intent is clearly conveyed in the email."},
@@ -204,14 +205,6 @@ function barComponentInteraction(id, skill, mastered, score){
                 $(".mastery-level-score").css("color","#8C1A11");
             }
         }
-        // else{
-        //     $(select_skill_id).css("background","");
-        //     $(select_skill_id).css("box-shadow","");
-        //     select_skill_id = '';
-
-        //     $("#no-skill-selected").show();
-        //     $("#select-skill").hide();
-        // }
     })
 }
 
@@ -279,7 +272,25 @@ function activityComponentInteraction(id, name, type){
         if (type == "Practice Activity"){
             $("#skill-mastery-main").hide();
             $("#skill-mastery-activity-detail").show();
+
+            $("#detail-content-knowledge-check").hide();
+            $("#detail-side-knowledge-check").hide();
+            $("#detail-content-practice-activity").show();
+            $("#detail-side-practice-activity").show();
+
             updateActivityDetailPA(select_skill, name, rubrics, examples);
+            current_page = "skill-mastery-activity-detail";
+        }
+        else if (type == "Knowledge Check"){
+            $("#skill-mastery-main").hide();
+            $("#skill-mastery-activity-detail").show();
+
+            $("#detail-content-practice-activity").hide();
+            $("#detail-side-practice-activity").hide();
+            $("#detail-content-knowledge-check").show();
+            $("#detail-side-knowledge-check").show();
+
+            updateActivityDetailKC(select_skill, name);
             current_page = "skill-mastery-activity-detail";
         }
     })   
@@ -309,6 +320,176 @@ function updateActivityDetailPA(skill, name, rubrics, examples){
 
     // example
     updateExampleCard(examples, example_index);
+}
+
+var question = [
+    {
+        q: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+        score:0,
+        max_points: 1,
+        total_res_num: 63,
+        response: [
+            {name: "Wage Rate Requirements statute", num:12},
+            {name: "Service Contract Labor Standards statute", num:16},
+            {name: "FAR part 37", num: 20},
+            {name: "FAR part 36", num: 15}
+        ],
+        correctness: 0.26,
+        difficulty_index: 0.2,
+        discrimination_index: 0.2
+    },
+    {
+        q: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+        score:1,
+        max_points: 1,
+        total_res_num: 63,
+        response: [
+            {name: "Wage Rate Requirements statute", num:12},
+            {name: "Service Contract Labor Standards statute", num:16},
+            {name: "FAR part 37", num: 20},
+            {name: "FAR part 36", num: 15}
+        ],
+        correctness: 0.26,
+        difficulty_index: 0.2,
+        discrimination_index: 0.2
+    },
+    {
+        q: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+        score:1,
+        max_points: 1,
+        total_res_num: 63,
+        response: [
+            {name: "Wage Rate Requirements statute", num:12},
+            {name: "Service Contract Labor Standards statute", num:16},
+            {name: "FAR part 37", num: 20},
+            {name: "FAR part 36", num: 15}
+        ],
+        correctness: 0.26,
+        difficulty_index: 0.2,
+        discrimination_index: 0.2
+    },
+    {
+        q: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+        score:1,
+        max_points: 1,
+        total_res_num: 63,
+        response: [
+            {name: "Wage Rate Requirements statute", num:12},
+            {name: "Service Contract Labor Standards statute", num:16},
+            {name: "FAR part 37", num: 20},
+            {name: "FAR part 36", num: 15}
+        ],
+        correctness: 0.26,
+        difficulty_index: 0.2,
+        discrimination_index: 0.2
+    },
+    {
+        q: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+        score:1,
+        max_points: 1,
+        total_res_num: 63,
+        response: [
+            {name: "Wage Rate Requirements statute", num:12},
+            {name: "Service Contract Labor Standards statute", num:16},
+            {name: "FAR part 37", num: 20},
+            {name: "FAR part 36", num: 15}
+        ],
+        correctness: 0.26,
+        difficulty_index: 0.2,
+        discrimination_index: 0.2
+    },
+    {
+        q: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+        score:1,
+        max_points: 1,
+        total_res_num: 63,
+        response: [
+            {name: "Wage Rate Requirements statute", num:12},
+            {name: "Service Contract Labor Standards statute", num:16},
+            {name: "FAR part 37", num: 20},
+            {name: "FAR part 36", num: 15}
+        ],
+        correctness: 0.26,
+        difficulty_index: 0.2,
+        discrimination_index: 0.2
+    }
+]
+
+function expandOrCollapseKC(index, id, src){
+    var list = src.split("/");
+    var img = list.pop();
+    if (img == "up-arrow.png"){
+        $("#"+id).attr("src", "asset/down-arrow.png");
+        $("#question-component-bottom-"+index).hide();
+    }
+    else{
+        $("#"+id).attr("src", "asset/up-arrow.png");
+        $("#question-component-bottom-"+index).show();
+    }
+}
+
+$("#knowledge-check-expand-all").click(()=>{
+    $(".knowledge-check-arrow").attr("src", "asset/up-arrow.png");
+    $(".question-component-bottom").show();
+})
+
+$("#knowledge-check-collapse-all").click(()=>{
+    $(".knowledge-check-arrow").attr("src", "asset/down-arrow.png");
+    $(".question-component-bottom").hide();
+})
+
+function expand_annotation_kc(id, src, content_id){
+    var list = src.split("/");
+    var img = list.pop();
+    if (img == "close.png"){
+        $("#"+id).attr("src", "asset/open.png");
+        $("#"+content_id).show();
+    }
+    else{
+        $("#"+id).attr("src", "asset/close.png");
+        $("#"+content_id).hide();
+    }
+}
+
+function updateActivityDetailKC(skill, name){
+    $("#detail-nav-skill-name").text(skill);
+    $("#detail-title-type").text("Knowledge check");
+    $("#detail-title-name").text(name);
+
+    question.forEach((element,i) => {
+        $("#knowledge-check-questions").append("<div class='question-component' id='question-component-"+i+"'></div>");
+        $("#question-component-"+i).append("<div class='question-component-top' id='question-component-top-"+i+"'></div>")
+            $("#question-component-top-"+i).append("<div class='question-type' id='question-type-"+i+"'></div>")
+                $("#question-type-"+i).append("<div class='knowledge-check-question'>Question "+(i+1)+"</div>")
+                $("#question-type-"+i).append("<div class='knowledge-check-type'>"+skill+"</div>")
+            $("#question-component-top-"+i).append("<div class='score-arrow' id='score-arrow-"+i+"'></div>")
+                $("#score-arrow-"+i).append("<div class='knowledge-check-score'>Points: "+element.score+"/"+element.max_points+"</div>")
+                $("#score-arrow-"+i).append("<img class='knowledge-check-arrow' id='knowledge-check-arrow-"+i+"' onclick='expandOrCollapseKC("+i+", this.id, this.src)' src='asset/down-arrow.png'>")
+
+        $("#question-component-"+i).append("<div class='question-component-bottom' id='question-component-bottom-"+i+"'></div>")
+            $("#question-component-bottom-"+i).append("<div class='question-q'>"+element.q+"</div>")
+            $("#question-component-bottom-"+i).append("<div class='question-component-bottom-left-right' id='question-component-bottom-left-right-"+i+"'></div>")
+                $("#question-component-bottom-left-right-"+i).append("<div class='question-component-bottom-left' id='question-component-bottom-left-"+i+"'></div>")
+                    $("#question-component-bottom-left-"+i).append("<div class='kc-block-title'>Number of responses</div>")
+                    $("#question-component-bottom-left-"+i).append("<div class='res-list' id='res-list-"+i+"'></div>")
+                    element.response.forEach((res,ind) =>{
+                        $("#res-list-"+i).append("<div class='res-name-num' id='res-name-num-"+i+"-"+ind+"'></div>")
+                            $("#res-name-num-"+i+"-"+ind).append("<div class='res-name'>"+res.name+"</div>")
+                            $("#res-name-num-"+i+"-"+ind).append("<div class='kc-block-score'>"+res.num+"/"+element.total_res_num+"</div>")
+                    })
+                $("#question-component-bottom-left-right-"+i).append("<div class='question-component-bottom-right' id='question-component-bottom-right-"+i+"'></div>")
+                    $("#question-component-bottom-right-"+i).append("<div class='correctness-block' id='correctness-block-"+i+"'></div>")
+                        $("#correctness-block-"+i).append("<div class='kc-block-title'>correctness</div>")
+                        $("#correctness-block-"+i).append("<div class='kc-block-score'>"+parseInt(element.correctness*100)+"%"+"</div>")
+                    $("#question-component-bottom-right-"+i).append("<div class='difficulty-block' id='difficulty-block-"+i+"'></div>")
+                        $("#difficulty-block-"+i).append("<div class='kc-block-title'>difficulty index</div>")
+                        $("#difficulty-block-"+i).append("<div class='kc-block-score'>"+element.difficulty_index+"</div>")
+                    $("#question-component-bottom-right-"+i).append("<div class='discrimination-block' id='discrimination-block-"+i+"'></div>")
+                        $("#discrimination-block-"+i).append("<div class='kc-block-title'>discrimination index</div>")
+                        $("#discrimination-block-"+i).append("<div class='kc-block-score'>"+element.discrimination_index+"</div>")
+        $(".question-component-bottom").hide();
+    })          
+        
 }
 
 $("#example-set-left-arrow").click(()=> {
@@ -362,13 +543,6 @@ function updateExampleCard(examples, example_index){
 
     $("#card-text").text(data.content)
     $('#card-total-score').text(total)
-}
-
-
-function updateActivityDetailKC(skill, activity, question_num){
-    $("#detail-nav-skill-name").text(skill);
-    $("#detail-title-type").text("Practice Activity");
-    $("#detail-title-name").text(activity);
 }
 
 
@@ -490,9 +664,9 @@ function addImpactActivityComponent(index, data){
         $("#impact-component-insights-list-"+index).append("<li>"+element+"</li>")
     })
 
-    $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+    $(".impact-component-insights").width(Math.min(281,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
     $( window ).resize(function() {
-        $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+        $(".impact-component-insights").width(Math.min(281,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
     })
 
     $("#impact-component-bottom-"+index).hide();
@@ -518,18 +692,20 @@ function expandOrCollapse(index, id, src){
         $("#"+id).attr("src", "asset/up-arrow.png");
         $("#impact-component-bottom-"+index).hide();
     }
-    $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
+    $(".impact-component-insights").width(Math.min(281,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
 }
 
 
-var state="collapse";
+
 $("#expand-all").click(()=>{
     $(".impact-component-bottom").show();
+    $(".impact-component-control").attr("src", "asset/down-arrow.png");
     state="expand";
 })
 
 $("#collapse-all").click(()=>{
     $(".impact-component-bottom").hide();
+    $(".impact-component-control").attr("src", "asset/up-arrow.png");
     state="collapse";
 })
 
@@ -694,8 +870,6 @@ function addImpactSkillComponent(index, data){
         $("#color-name-score-"+index+"-"+i).append("<div class='impact-component-activities-score'>"+element.score+"</div>")
         total += element.score;
     })
-
-    // $("#impact-component-svg-"+index).attr("color","#ccc")
 
     $("#impact-component-total-arrow-"+index).append("<div class='impact-component-total' id='impact-component-total-"+index+"'>Overall Improvement: "+total+"</div>")
     $("#impact-component-total-arrow-"+index).append("<img class='impact-component-control' onclick='expandOrCollapse("+index+", this.id, this.src)' id='impact-component-control-"+index+"' src='asset/up-arrow.png'>")

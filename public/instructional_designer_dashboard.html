@@ -82,6 +82,7 @@
                 <img id="detail-nav-arrow2" src="asset/arrow.png">
                 <div id="detail-nav-text">Activity Detail</div>
             </div>
+            
             <div id="detail-title">
                 <div id="type-name">
                     <div id="detail-title-type">Knowledge Check</div>
@@ -144,6 +145,69 @@
                         <li>Apply Principles</li>
                         <li>Critical Thinking</li>
                     </ul>
+                </div>
+            </div>
+        
+            <div id="detail-content-knowledge-check">
+                <div id="knowledge-check-expand-collapse">
+                    <div id="knowledge-check-expand-all">Expand All</div>
+                    <div id="knowledge-check-collapse-all">Collapse All</div>
+                </div>
+                <div id="knowledge-check-questions"></div>
+            </div>
+
+            <div id="detail-side-knowledge-check">
+
+                <div class='index-block' id="detail-side-knowledge-check-difficulty-index">
+                    <div class='index-top' id="difficulty-index-top">
+                        <div class='index-title' id="difficulty-index-title">What is Difficulty Index?</div>
+                        <img id="difficulty-index-expand" onclick="expand_annotation_kc(this.id, this.src, 'difficulty-index-body')" src="asset/close.png">
+                    </div>
+                    <div class='index-body' id="difficulty-index-body">Difficulty Index determines the proportion of students who answer a particular question correctly on a test, thus determining how easy or difficult it is.
+                        <br/>Smaller the index, more difficult the question is.</div>
+                </div>
+
+                <div class='index-block' id="detail-side-knowledge-check-discrimination-index">
+                    <div class='index-top' id="discrimination-index-top">
+                        <div class='index-title' id="discrimination-index-title">What is Discrimination Index?</div>
+                        <img id="discrimination-index-expand" onclick="expand_annotation_kc(this.id, this.src, 'discrimination-index-body')" src="asset/close.png">
+                    </div>
+                    <div class='index-body' id="discrimination-index-body">Item discrimination evaluates how well an individual question sorts students who have mastered the material from students who have not. 
+                        <br/>Bigger the index, more discriminal the question is</div>
+                </div>
+                <div>
+                    <div id="skill-rubric-title">Related skill rubrics</div>
+                    <div class="skill-rubric-blocks">
+                        <div class="skill-rubric-block">
+                            <div class="skill-rubric-block-name-score">
+                                <div class="skill-rubric-block-name">Ethics</div>
+                                <div class="skill-rubric-block-score">1/2</div>
+                            </div>
+                            <div class="skill-rubric-block-content">
+                                Among the 10 questions, 2 of them are related to applying principles. Out of the 2 questions, 1 are correct on average.
+                            </div>
+                        </div>
+    
+                        <div class="skill-rubric-block">
+                            <div class="skill-rubric-block-name-score">
+                                <div class="skill-rubric-block-name">Communication</div>
+                                <div class="skill-rubric-block-score">4/5</div>
+                            </div>
+                            <div class="skill-rubric-block-content">
+                                Among the 10 questions, 5 of them are related to communication. Out of the 5 questions, 4 are correct on average.
+                            </div>
+                        </div>
+    
+                        <div class="skill-rubric-block">
+                            <div class="skill-rubric-block-name-score">
+                                <div class="skill-rubric-block-name">Apply Principles</div>
+                                <div class="skill-rubric-block-score">2/3</div>
+                            </div>
+                            <div class="skill-rubric-block-content">
+                                Among the 10 questions, 3 of them are related to applying principles. Out of the 3 questions, 2 are correct on average.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
