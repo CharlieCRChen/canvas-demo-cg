@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+    <head>
+        <script src="//d3js.org/d3.v4.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="public/learner_dashboard.css">
+        <title>Learner Dashboard</title>
+    </head>
+
+    <body>
+        <div id="nav-container">
+            <div class='nav-text' id="nav-main">Skills</div>
+            <img id='nav-arrow-1' src='asset/arrow.png'>
+            <div class='nav-text' id="nav-skill">Communication</div>
+            <img id='nav-arrow-2' src='asset/arrow.png'>
+            <div class='nav-text' id="nav-activity-detail">Activity Detail</div>
+        </div>
+
+        <div id="skill-side-main"> 
+            <!-- move the item -->
+            <div id="skill-container">
+                <div class="main-title">Your Mastery level</div>
+                <div id="legend-set">
+                    <div class="legend-component">
+                        <img id='legend-1' src="asset/mastery-level-icon.png">
+                        <div class="legend-name">Your Mastey Level</div>
+                    </div>
+                    <div class="legend-component">
+                        <img id='legend-2' src="asset/cohort-avg-icon.png">
+                        <div class="legend-name">Cohort Average</div>
+                    </div>
+                    <div class="legend-component">
+                        <img id='legend-' src="asset/cohort-dist-icon.png">
+                        <div class="legend-name">Cohort Distribution</div>
+                    </div>
+                </div>
+                <div id="component-set"></div>
+            </div>
+    
+            <div id="side-container">
+                <div class="main-title">overview</div>
+                <div class="side-component">
+                    <div class="side-title">Your are doing great at Team-building</div>
+                    <div class="side-content">Your Team-building skill is at the top of the cohort! Keep going!</div>
+                </div>
+                <div class="side-component">
+                    <div class="side-title">Your need to practice more in Negotiation</div>
+                    <div class="side-content">Among all the professional skills, you seems to be less proficient in Negotiation. Try to practice more!</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="skill-detail">
+            <div id="skill-detail-left">
+                <div id="skill-detail-left-title">Your Progress</div>
+                
+                <div id="skill-detail-filter-set">
+                    <div id="skill-detail-filter-title">Filter by Activity Type</div>
+                    <div id="skill-detail-filters">
+                        <div class="filter-component" id="filter-component-1">
+                            <input type="checkbox" name="checkbox-filter" id="checkbox-discussion-board" checked>
+                            <label for="checkbox-discussion-board">Discussion Board</label>
+                        </div>
+                        <div class="filter-component" id="filter-component-2">
+                            <input type="checkbox" name="checkbox-filter" id="checkbox-knowledge-check" checked>
+                            <label for="checkbox-knowledge-check">Knowledge Check</label>
+                        </div>
+                        <div class="filter-component" id="filter-component-3">
+                            <input type="checkbox" name="checkbox-filter" id="checkbox-practice-activity" checked>
+                            <label for="checkbox-practice-activity">Practice Activity</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="skill-detail-bar"></div>
+
+                <div id="skill-detail-activity-title">
+                    <div id="skill-detail-activity-title-1">Listed Activities</div>
+                    <div id="skill-detail-activity-title-2">Due Time</div>
+                    <div id="skill-detail-activity-title-3">Your Score</div>
+                </div>
+                <div id="skill-detail-activity-set"></div>
+            </div>
+
+
+            <div id="skill-detail-right">
+                <div id="skill-detail-right-annotation">
+                    <div id="right-annotation-title-icon">
+                        <div id="right-annotation-title">Why communication?</div>
+                        <img id='rigth-annotation-expand' onclick="expand_annotation(this.id, this.src)" src="asset/open.png">
+                    </div>
+                    <div id="right-annotation-content">This skill between all affected parties must be exchanged and managed early and often to maintain contract management effectiveness.
+                        As a contracting specialist, facilitate this skill through clearly written documentation that is unambiguous and able to be understood</div>
+                </div>
+
+                <div id="skill-detail-right-coming-soon">
+                    <div id="coming-soon-title">Coming Soon</div>
+                    <div id="coming-soon-activity-set"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skill-coming-soon-page">
+            <div id="coming-soon-page-header">
+                <div id='header-type-name'>
+                    <div id='coming-soon-page-header-type'></div>
+                    <div id='coming-soon-page-header-name'></div>
+                </div>
+                <div id='coming-soon-page-header-button'>Go to Assignment Page</div>
+            </div>
+            <div id="coming-soon-page-body">
+                <div class='coming-soon-page-section' id="coming-soon-page-body-learning-objective">
+                    <div class="coming-soon-page-section-title">Learning Objective</div>
+                    <ul>
+                        <li>Communicate and persuade up, down, and across chains of authority to successfully gain support for creative and effective solutions.</li>
+                    </ul>
+                </div>
+
+                <div class='coming-soon-page-section' id="coming-soon-page-body-recommended-content">
+                    <div class="coming-soon-page-section-title">Recommended Content</div>
+                    <div id="recommended-content-set">
+                        <div class="recommended-component">
+                            <img src="asset/related-instruction.png">
+                            <div>Effective Communication Practices</div>
+                        </div>
+                        <div class="recommended-component">
+                            <img src="asset/related-instruction.png">
+                            <div>Communication throughout the Acquisition Life Cycle</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class='coming-soon-page-section' id="coming-soon-page-body-related-skill">
+                    <div class="coming-soon-page-section-title">Related Skills</div>
+                    <ul>
+                        <li>Apply Principles</li>
+                        <li>Critical</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="public/learner_dashboard.js"></script>
+    </body>
+</html>

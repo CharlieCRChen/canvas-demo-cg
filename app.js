@@ -25,6 +25,10 @@ app.get('/instruction', (req, res, next) => {
     res.sendFile(`${__dirname}/public/instructional_designer_dashboard.html`);
 })
 
+app.get('/learner', (req, res, next) => {
+    res.sendFile(`${__dirname}/public/learner_dashboard.html`);
+})
+
 app.get('/mastery_level', (req, res, next) => {
     processing().then(self => res.json(self))
 })
