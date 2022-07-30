@@ -552,11 +552,6 @@ body {
 /* skill-coming-soon-page  */
 
 #skill-coming-soon-page{
-    /* padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap:24px; */
-
     display:grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
@@ -624,3 +619,180 @@ body {
 }
 
 
+
+/* list-activity-detail-page */
+#list-activity-detail-page{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+    'header header header header header header header header header placeholder placeholder placeholder'
+    'body body body body body body body body body side side side';
+    grid-row-gap: 18px;
+    padding: 24px 0;
+}
+
+#list-activity-detail-header{
+    grid-area: header;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#list-activity-detail-header-type-name{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#list-activity-detail-header-type{
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #565656;
+}
+
+#list-activity-detail-header-name{
+    font-weight: 600;
+    font-size: 30px;
+    color: #313131;
+}
+
+#list-activity-detail-header-score-button{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#list-activity-detail-header-score{
+    font-weight: 600;
+    font-size: 30px;
+    color: #8C1A11;
+}
+
+#list-activity-detail-header-button{
+    font-weight: 600;
+    font-size: 16px;
+    color: #8C1A11;
+
+    padding: 4px 10px;
+    border: 1px solid rgba(140, 26, 17, 0.6);
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+/* list-activity-detail-practice-activity */
+#list-activity-detail-body-practice-activity{
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.practice-activity-title{
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #8C1A11;
+    margin-bottom: 12px;
+}
+
+#practice-activity-recommend-set{
+    display:flex;
+    flex-direction: column;
+    width: 310px;
+    gap: 12px;
+}
+
+.practice-activity-recommend-component{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #8C8888;
+    border-radius: 4px;
+}
+
+#practice-activity-recommend img{
+    margin:0;
+    width: 18px;
+    height: 20px;
+}
+
+#practice-activity-learning-objective ul{
+    margin:0;
+}
+
+#practice-activity-learning-objective li{
+    margin: 4px 0;
+}
+
+#practice-activity-other-skills ul{
+    margin:0;
+}
+
+#practice-activity-other-skills li{
+    margin: 4px 0;
+}
+
+#practice-activity-feedback{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #565656;
+}   
+
+#practice-activity-feedback-header{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+    'rubric rubric score feedback feedback feedback feedback feedback feedback';
+    grid-row-gap: 18px;
+
+    border-bottom: 1px solid #8C8888;
+}
+
+#feedback-header-1{
+    grid-area: rubric;
+}
+
+#feedback-header-2{
+    grid-area: score;
+    text-align: center;
+}
+
+#feedback-header-3{
+    grid-area: feedback;
+}
+
+.feedback-component{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+    'rubric rubric score feedback feedback feedback feedback feedback feedback';
+    grid-row-gap: 18px;
+
+    align-items: center;
+    padding: 5px 0;
+}
+
+.feedback-component-name{
+    grid-area: rubric;
+}
+
+.feedback-component-score{
+    grid-area: score;
+    text-align: center;
+}
+
+.feedback-component-feedback{
+    grid-area: feedback;
+}
+
+/* list-activity-detail-knowledge-check */

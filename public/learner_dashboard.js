@@ -72,7 +72,33 @@ var main_activity = [
         name:'Effective Written Communication',
         due:'Jul 6, 2022 by 7:59pm',
         score:19,
-        max_point: 20
+        max_point: 20,
+        rubrics:[
+            {
+                name: 'Purpose',
+                rubric_score: 5,
+                rubric_max_point: 5,
+                feedback: "Great work! You highlight the purpose of the message in your email and it is evident that you understand it!"
+            },
+            {
+                name: 'Audience',
+                rubric_score: 5,
+                rubric_max_point: 5,
+                feedback: "Your submission shows grat clarity and it is evident that you understand who your audience is and that you have tailored the content, tone and structure for the audience. "
+            },
+            {
+                name: 'Structure, grammar and tone',
+                rubric_score: 5,
+                rubric_max_point: 5,
+                feedback: "Great work here too! There were no obvious structural or grammatical errors. You also used a formal tone to write the email."
+            },
+            {
+                name: 'Attributes of contents',
+                rubric_score: 4,
+                rubric_max_point: 5,
+                feedback: "You forgot to mention your availability in the email. It is important to ensure that all details are covered. "
+            }
+        ]
     },
     {
         type:'knowledge check',
@@ -107,7 +133,33 @@ var main_activity = [
         name:'FAR Citation',
         due:'Jul 21, 2022 by 7:59pm',
         score:9.75,
-        max_point: 10
+        max_point: 10,
+        rubrics:[
+            {
+                name: 'Purpose',
+                rubric_score: 2.5,
+                rubric_max_point: 2.5,
+                feedback: "Great work! You highlight the purpose of the message in your email and it is evident that you understand it!"
+            },
+            {
+                name: 'Audience',
+                rubric_score: 2.5,
+                rubric_max_point: 2.5,
+                feedback: "Your submission shows grat clarity and it is evident that you understand who your audience is and that you have tailored the content, tone and structure for the audience. "
+            },
+            {
+                name: 'Structure, grammar and tone',
+                rubric_score: 2.5,
+                rubric_max_point: 2.5,
+                feedback: "Great work here too! There were no obvious structural or grammatical errors. You also used a formal tone to write the email."
+            },
+            {
+                name: 'Attributes of contents',
+                rubric_score: 2.25,
+                rubric_max_point: 2.5,
+                feedback: "You forgot to mention your availability in the email. It is important to ensure that all details are covered. "
+            }
+        ]
     },
     {
         type:'discussion',
@@ -224,6 +276,7 @@ function updateSkillDetail(skill,data){
 $("#nav-skill").click(()=>{
     $("#skill-detail").show();
     $("#skill-coming-soon-page").hide();
+    $("#list-activity-detail-page").hide();
 
     $("#nav-skill").css("color", "#313131");
     $("#nav-skill").css("cursor", "");
@@ -272,12 +325,12 @@ function updateSkillDetailActivity(data){
         $("#detail-activity-component-"+index).append("<div class='component-due-time'>"+element.due+"</div>")
         $("#detail-activity-component-"+index).append("<div class='component-your-score'>"+element.score+"/"+element.max_point+"</div>")
     
-        skillDetailActivityComponentInteraction("#detail-activity-component-"+index, element.name, element.type)
+        skillDetailActivityComponentInteraction("#detail-activity-component-"+index, element.name, element.type, element.score, element.max_point, element.rubrics)
     
     })
 }
 
-function skillDetailActivityComponentInteraction(id, name, type){
+function skillDetailActivityComponentInteraction(id, name, type, score, max_point, rubrics){
     $(id).mouseover(()=>{
         $(id).css("background","#FFFFFF");
         $(id).css("box-shadow","2px 4px 12px rgba(114, 114, 114, 0.25)");
@@ -289,16 +342,50 @@ function skillDetailActivityComponentInteraction(id, name, type){
     })
 
     $(id).click(()=>{
-        // $("#nav-skill").show();
-        // $("#nav-arrow-1").show();
-        // $("#nav-skill").text(name);
-        // $("#nav-main").css("color",'#8C1A11');
-        // $("#nav-main").css("cursor","pointer");
-        // $('#skill-side-main').hide();
-        // $('#skill-detail').show();
+        if (type == 'practice activity'){
+            $("#skill-detail").hide();
+            $("#list-activity-detail-page").show();
+            $("#list-activity-detail-body-practice-activity").show();
+            $("#list-activity-detail-body-knowledge-check").hide();
 
-        // updateSkillDetail(name,comming_soon_activity);
-        // updateSkillDetailActivity(main_activity);
+            $("#list-activity-detail-header-type").text(type);
+            $("#list-activity-detail-header-name").text(name);
+            $("#list-activity-detail-header-score").text(score+"/"+max_point);
+
+            $("#nav-skill").css("color", "#8C1A11");
+            $("#nav-skill").css("cursor", "pointer");
+            $("#nav-arrow-2").show();
+            $("#nav-activity-detail").show();
+
+            $("#practice-activity-feedback-set").empty();
+
+            rubrics.forEach((element, index)=>{
+                $("#practice-activity-feedback-set").append("<div class='feedback-component' id='feedback-component-"+index+"'></div>");
+                $("#feedback-component-"+index).append("<div class='feedback-component-name'>"+element.name+"</div>");
+                $("#feedback-component-"+index).append("<div class='feedback-component-score'>"+element.rubric_score+'/'+element.rubric_max_point+"</div>");
+                $("#feedback-component-"+index).append("<div class='feedback-component-feedback'>"+element.feedback+"</div>");
+
+                if (index < rubrics.length-1){
+                    $("#feedback-component-"+index).css("border-bottom", "1px solid #D6D6D6")
+                }
+            })
+        }
+        
+        else if(type == 'knowledge check'){
+            $("#skill-detail").hide();
+            $("#list-activity-detail-page").show();
+            $("#list-activity-detail-body-practice-activity").hide();
+            $("#list-activity-detail-body-knowledge-check").show();
+
+            $("#list-activity-detail-header-type").text(type);
+            $("#list-activity-detail-header-name").text(name);
+            $("#list-activity-detail-header-score").text(score+"/"+max_point);
+
+            $("#nav-skill").css("color", "#8C1A11");
+            $("#nav-skill").css("cursor", "pointer");
+            $("#nav-arrow-2").show();
+            $("#nav-activity-detail").show();
+        }
     })   
 }
 
