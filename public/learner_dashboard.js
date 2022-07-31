@@ -65,7 +65,129 @@ var main_activity = [
         name:'The Acquisition Life Cycle',
         due:'Jul 3, 2022 by 7:59pm',
         score:7,
-        max_point: 10
+        max_point: 10,
+        questions:[
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            }
+        ]
     },
     {
         type:'practice activity',
@@ -104,8 +226,130 @@ var main_activity = [
         type:'knowledge check',
         name:'Researching Basic Contracting Statutes',
         due:'Jul 9, 2022 by 7:59pm',
-        score:8.75,
-        max_point: 10
+        score:8,
+        max_point: 10,
+        questions:[
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            }
+        ]
     },
     {
         type:'discussion',
@@ -119,14 +363,258 @@ var main_activity = [
         name:'Acquisition Phases',
         due:'Jul 15, 2022 by 7:59pm',
         score:9,
-        max_point: 10
+        max_point: 10,
+        questions:[
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            }
+        ]
     },
     {
         type:'knowledge check',
         name:'Authority',
         due:'Jul 18, 2022 by 7:59pm',
         score:8,
-        max_point: 10
+        max_point: 10,
+        questions:[
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 0,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            },
+            {
+                score: 1,
+                max_point: 1,
+                question: "What statute or regulation requires the contracting officer to obtain a determination of prevailing wages from the Department of Labor on contracts valued in excess of $2,500?",
+                options:[
+                    "Wage Rate Requirements statute",
+                    "Service Contract Labor Standards statute",
+                    "FAR part 37",
+                    "FAR part 36"
+                ],
+                feedback: "To ensure fulfillment of the vision for the Federal Acquisition System, the FAR directs the acquisition system to achieve four goals: Satisfy the end user in terms of cost, quality, and timeliness of the delivered product or service. Minimize administrative operating costs. Conduct business with integrity, fairness, and openness. Fulfill public policy objectives."
+            }
+        ]
     },
     {
         type:'practice activity',
@@ -226,7 +714,7 @@ function activityComponentInteraction(id, name){
         $('#skill-detail').show();
 
         updateSkillDetail(name,comming_soon_activity);
-        updateSkillDetailActivity(main_activity);
+        updateSkillDetailActivity(name, main_activity);
     })   
 }
 
@@ -300,7 +788,7 @@ function expand_annotation(id, src){
     }
 }
 
-function updateSkillDetailActivity(data){
+function updateSkillDetailActivity(skill, data){
     $("#skill-detail-activity-set").empty();
     data.forEach((element, index)=>{
         $("#skill-detail-activity-set").append("<div class='detail-activity-component' id='detail-activity-component-"+index+"'></div>");
@@ -324,13 +812,16 @@ function updateSkillDetailActivity(data){
             }
         $("#detail-activity-component-"+index).append("<div class='component-due-time'>"+element.due+"</div>")
         $("#detail-activity-component-"+index).append("<div class='component-your-score'>"+element.score+"/"+element.max_point+"</div>")
-    
-        skillDetailActivityComponentInteraction("#detail-activity-component-"+index, element.name, element.type, element.score, element.max_point, element.rubrics)
+        
+        var content;
+        if (element.type == "practice activity") {content = element.rubrics;}
+        else if (element.type == "knowledge check") {content = element.questions;}
+        skillDetailActivityComponentInteraction("#detail-activity-component-"+index, skill, element.name, element.type, element.score, element.max_point, content)
     
     })
 }
 
-function skillDetailActivityComponentInteraction(id, name, type, score, max_point, rubrics){
+function skillDetailActivityComponentInteraction(id, skill, name, type, score, max_point, content){
     $(id).mouseover(()=>{
         $(id).css("background","#FFFFFF");
         $(id).css("box-shadow","2px 4px 12px rgba(114, 114, 114, 0.25)");
@@ -347,6 +838,7 @@ function skillDetailActivityComponentInteraction(id, name, type, score, max_poin
             $("#list-activity-detail-page").show();
             $("#list-activity-detail-body-practice-activity").show();
             $("#list-activity-detail-body-knowledge-check").hide();
+            $("#knowledge-check-side").hide();
 
             $("#list-activity-detail-header-type").text(type);
             $("#list-activity-detail-header-name").text(name);
@@ -359,13 +851,13 @@ function skillDetailActivityComponentInteraction(id, name, type, score, max_poin
 
             $("#practice-activity-feedback-set").empty();
 
-            rubrics.forEach((element, index)=>{
+            content.forEach((element, index)=>{
                 $("#practice-activity-feedback-set").append("<div class='feedback-component' id='feedback-component-"+index+"'></div>");
                 $("#feedback-component-"+index).append("<div class='feedback-component-name'>"+element.name+"</div>");
                 $("#feedback-component-"+index).append("<div class='feedback-component-score'>"+element.rubric_score+'/'+element.rubric_max_point+"</div>");
                 $("#feedback-component-"+index).append("<div class='feedback-component-feedback'>"+element.feedback+"</div>");
 
-                if (index < rubrics.length-1){
+                if (index < content.length-1){
                     $("#feedback-component-"+index).css("border-bottom", "1px solid #D6D6D6")
                 }
             })
@@ -376,6 +868,7 @@ function skillDetailActivityComponentInteraction(id, name, type, score, max_poin
             $("#list-activity-detail-page").show();
             $("#list-activity-detail-body-practice-activity").hide();
             $("#list-activity-detail-body-knowledge-check").show();
+            $("#knowledge-check-side").show();
 
             $("#list-activity-detail-header-type").text(type);
             $("#list-activity-detail-header-name").text(name);
@@ -385,7 +878,86 @@ function skillDetailActivityComponentInteraction(id, name, type, score, max_poin
             $("#nav-skill").css("cursor", "pointer");
             $("#nav-arrow-2").show();
             $("#nav-activity-detail").show();
+
+            $("#knowledge-check-question-set").empty();
+            
+            content.forEach((element, index)=>{
+                $("#knowledge-check-question-set").append("<div class='knowledge-check-question-component' id='knowledge-check-question-component-"+index+"'></div>")
+                $("#knowledge-check-question-component-"+index).append("<div class='question-component-header' id='question-component-header-"+index+"'></div>")
+                    $("#question-component-header-"+index).append("<div class='question-type' id='question-skill-"+index+"'></div>")
+                        $("#question-skill-"+index).append("<div class='question-component-header-question'>Question "+(index+1)+"</div>");
+                        $("#question-skill-"+index).append("<div class='question-component-header-skill'>"+skill+"</div>");
+                    $("#question-component-header-"+index).append("<div class='score-icon' id='score-icon-"+index+"'></div>")
+                        $("#score-icon-"+index).append("<div class='question-component-header-score'>Points: "+element.score+"/"+element.max_point+"</div>")    
+                        $("#score-icon-"+index).append("<img class='question-component-header-icon' id='question-component-header-icon-"+index+"' onclick='expand_knowledge_check_question(this.id, this.src)' src='asset/down-arrow.png'>")    
+                    
+                    $("#knowledge-check-question-component-"+index).append("<div class='question-component-body' id='question-component-body-"+index+"'></div>")
+                    $("#question-component-body-"+index).append("<div class='question-component-body-question'>"+element.question+"</div>")
+
+                    $("#question-component-body-"+index).append("<div class='question-component-body-options-feedback' id='question-component-body-options-feedback-"+index+"'></div>")
+                        $("#question-component-body-options-feedback-"+index).append("<div class='question-component-body-options' id='question-component-body-options-"+index+"'></div>")
+                        element.options.forEach((option,i) => {
+                            $("#question-component-body-options-"+index).append("<div class='question-component-body-options-component' id='question-component-body-options-component-"+index+'-'+i+"'></div>")
+                            $("#question-component-body-options-component-"+index+'-'+i).append("<input type='radio' name='question-component-body-options-"+index+"' id='question-component-body-options-"+index+'-'+i+"'/>")
+                            $("#question-component-body-options-component-"+index+'-'+i).append("<label for='question-component-body-options-"+index+'-'+i+"'>"+option+"</div>")
+                        })
+                        $("#question-component-body-options-feedback-"+index).append("<div class='question-component-body-feedback' id='question-component-body-feedback-"+index+"'></div>")
+                            $("#question-component-body-feedback-"+index).append("<div class='question-component-body-feedback-title'>general feedback</div>")
+                            $("#question-component-body-feedback-"+index).append("<div class='question-component-body-feedback-content'>"+element.feedback+"</div>")
+                    
+                    $("#question-component-body-"+index).hide();
+
+                    
+            })
         }
     })   
 }
+
+function expand_knowledge_check_question(id, src){
+    var index = id.split("-");
+    var index = index.pop();
+    var list = src.split("/");
+    var img = list.pop();
+    if (img=='up-arrow.png') {
+        $("#"+id).attr("src", "asset/down-arrow.png");
+        $("#question-component-body-"+index).hide();
+        $("#question-component-header-"+index).css("border-left","");
+    }
+    else{
+        $("#"+id).attr("src", "asset/up-arrow.png");
+        $("#question-component-body-"+index).show();
+        $("#question-component-header-"+index).css("border-left","3px solid #8C1A11");
+    }
+}
+
+$("#knowledge-check-expand").click(()=>{
+    $(".question-component-body").show();
+    $(".question-component-header").css("border-left","3px solid #8C1A11");
+})
+
+$("#knowledge-check-collapse").click(()=>{
+    $(".question-component-body").hide();
+    $(".question-component-header").css("border-left","");
+})
+
+$('input[type="checkbox"]').click(function(){
+    var type = this.id.split("-");
+    if (type.length == 3){ type = type[1]+" "+type[2];}
+    else{ type = type[1];}
+    
+    if($(this).prop("checked") == true){
+        for (var i=0; i<$('#skill-detail-activity-set .detail-activity-component').length; i++){
+            if ($("#listed-activity-type-"+i).text() == type){
+                $("#detail-activity-component-"+i).show();
+            }
+        }
+    }
+    else if($(this).prop("checked") == false){
+        for (var i=0; i<$('#skill-detail-activity-set .detail-activity-component').length; i++){
+            if ($("#listed-activity-type-"+i).text() == type){
+                $("#detail-activity-component-"+i).hide();
+            }
+        }
+    }
+});
 
