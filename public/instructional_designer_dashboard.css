@@ -493,7 +493,7 @@ img{
 
 /* skill-mastery-activity-detail */
 #skill-mastery-activity-detail {
-    margin: 12px 24px 24px 0;
+    margin: 12px 24px 0 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
@@ -931,7 +931,6 @@ img{
 
     background: rgba(140, 26, 17, 0.1);
 
-    border-left: 3px solid #8C1A11;
     box-shadow: 0px 1px 4px rgba(140, 26, 17, 0.15);
 
     flex: none;
@@ -1369,7 +1368,7 @@ img{
 
     background: rgba(140, 26, 17, 0.1);
 
-    border-left: 3px solid #8C1A11;
+    /* border-left: 3px solid #8C1A11; */
     box-shadow: 0px 1px 4px rgba(140, 26, 17, 0.15);
 
     flex: none;
@@ -1409,6 +1408,7 @@ img{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-items: space-between;
     padding: 0px 20px 0px 0px;
     gap: 28px;
 
@@ -1518,16 +1518,11 @@ img{
 .impact-component-insights{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 10px 20px;
     gap: 10px;
 
-
     background: #F4F4F4;
     border-radius: 6px;
-
-    flex: none;
-    order: 1;
 
     margin: 16px 0 20px 0;
 }
@@ -1611,4 +1606,8 @@ img{
 
 .impact-component-svg{
     background-color: #ccc;
+}
+
+#detail-content-practice-activity{
+    overflow: scroll;
 }

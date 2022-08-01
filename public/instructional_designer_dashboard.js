@@ -29,7 +29,7 @@ var examples = [
         [
             {name: "Purpose", score:2},
             {name: "Audience", score:2},
-            {name:"Structure, grammar and tone", score:4},
+            {name:"Structure, grammar and tone", score:3},
             {name:"Attributes of contents", score:5}
         ],
         content:"This is an example answer of communication practice activity This is an example answer of communication practice activity"
@@ -44,14 +44,243 @@ var examples = [
         ],
         content:"This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity"
     },
+    {
+        scores:
+        [
+            {name: "Purpose", score:2},
+            {name: "Audience", score:3},
+            {name:"Structure, grammar and tone", score:4},
+            {name:"Attributes of contents", score:2}
+        ],
+        content:"This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity"
+    },
+    {
+        scores:
+        [
+            {name: "Purpose", score:2},
+            {name: "Audience", score:3},
+            {name:"Structure, grammar and tone", score:3},
+            {name:"Attributes of contents", score:3}
+        ],
+        content:"This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity"
+    },
+    {
+        scores:
+        [
+            {name: "Purpose", score:4},
+            {name: "Audience", score:3},
+            {name:"Structure, grammar and tone", score:1},
+            {name:"Attributes of contents", score:1}
+        ],
+        content:"This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity"
+    },
+    {
+        scores:
+        [
+            {name: "Purpose", score:3},
+            {name: "Audience", score:5},
+            {name:"Structure, grammar and tone", score:5},
+            {name:"Attributes of contents", score:5}
+        ],
+        content:"This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity This is an example answer of communication practice activity"
+    },
 ];
 
+var skill_data = [
+    {
+        skill: "Team-building",
+        mastered: true,
+        low: 75,
+        high: 98,
+        score: 90
+    },
+    {
+        skill: "Apply Principles",
+        mastered: true,
+        low:70,
+        high:95,
+        score: 80
+    },
+    {
+        skill: "Communication",
+        mastered: true,
+        low:75,
+        high:93,
+        score: 86
+    },
+    {
+        skill: "Ethics",
+        mastered: true,
+        low:69,
+        high:95,
+        score: 88
+    },
+    {
+        skill: "Critical Thinking",
+        mastered: false,
+        low:65,
+        high:88,
+        score: 79
+    }
+]
 
+var activity_data = [
+    {   
+        name: "The Acquisition Life Cycle",
+        type: "Knowledge Check",
+        due_time: "Jul 3 2022 by 7:59pm",
+        high: 10,
+        low: 7,
+        score: 9,
+        max_score: 10
+    },
+    {   
+        name: "Effective Written Communication",
+        type: "Practice Activity",
+        due_time: "Jul 6 2022 by 7:59pm",
+        high: 19,
+        low: 12,
+        score: 16,
+        max_score: 20
+    },
+    {   
+        name: "Researching Basic Contracting Statutes",
+        type: "Practice Activity",
+        due_time: "Jul 9 2022 by 7:59pm",
+        high: 9,
+        low: 6,
+        score: 8.75,
+        max_score: 10
+    },
+    {   
+        name: "Incentives and Motivation",
+        type: "Discussion",
+        due_time: "Jul 12 2022 by 7:59pm",
+        high: 10,
+        low: 9,
+        score: 9.5,
+        max_score: 10
+    },
+    {   
+        name: "Acquisition Phases",
+        type: "Knowledge Check",
+        due_time: "Jul 15 2022 by 7:59pm",
+        high: 10,
+        low: 8,
+        score: 9,
+        max_score: 10
+    },
+    {   
+        name: "Authority",
+        type: "Knowledge Check",
+        due_time: "Jul 18 2022 by 7:59pm",
+        high: 9,
+        low: 7,
+        score: 8,
+        max_score: 10
+    },
+    {   
+        name: "FAR Citations",
+        type: "Practice Activity",
+        due_time: "Jul 21 2022 by 7:59pm",
+        high: 10,
+        low: 7,
+        score: 9.5,
+        max_score: 10
+    },
+    {   
+        name: "Acquisition Phases in Your Organization",
+        type: "Discussion",
+        due_time: "Jul 24 2022 by 7:59pm",
+        high: 10,
+        low: 7,
+        score: 9,
+        max_score: 10
+    },
+    {   
+        name: "FAR",
+        type: "Reflection",
+        due_time: "Jul 27 2022 by 7:59pm",
+        high: 10,
+        low: 8,
+        score: 9,
+        max_score: 10
+    },
+]
 
-
-
-
-
+//impact skill
+var impact_skill_data = [
+    {
+        name: "Communication",
+        total: 106,
+        activity:[
+            {name: "Discussion Board", score: 34 },
+            {name: "Practice Activity", score: 28},
+            {name: "Reflection", score: 26},
+            {name: "Knowledge Check", score: 18},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Team-building",
+        total: 94,
+        activity:[
+            {name: "Discussion Board", score: 26 },
+            {name: "Practice Activity", score: 24},
+            {name: "Reflection", score: 23},
+            {name: "Knowledge Check", score: 21},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Ethics",
+        total: 89,
+        activity:[
+            {name: "Discussion Board", score: 30 },
+            {name: "Practice Activity", score: 22},
+            {name: "Reflection", score: 19},
+            {name: "Knowledge Check", score: 18},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Apply Principles",
+        total: 84,
+        activity:[
+            {name: "Discussion Board", score: 29 },
+            {name: "Practice Activity", score: 21},
+            {name: "Reflection", score: 20},
+            {name: "Knowledge Check", score: 14},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    },
+    {
+        name: "Critical Thinking",
+        total: 79,
+        activity:[
+            {name: "Discussion Board", score: 26 },
+            {name: "Practice Activity", score: 24},
+            {name: "Reflection", score: 19},
+            {name: "Knowledge Check", score: 10},
+        ],
+        insights:[
+            "The overall instruction is most effective on communication skill cultivating.",
+            "Discussion board is most effective for cultivating the communication skill."
+        ]
+    }
+]
 
 
 
@@ -128,47 +357,80 @@ function navInteraction(){
     })
 }
 
-navInteraction()
+navInteraction();
 
-function createBarComponent(index, skill, mastered, score, add_bottom_line){
-    $("#skill-set").append("<div class='component-container' id='component-"+index+"'></div>");
-    $("#component-"+index).append("<div class='title-viz' id='title-viz-"+index+"'></div>")
-    $("#title-viz-"+index).append("<p class='component-title'>"+skill+"</p>");
-    $("#title-viz-"+index).append("<svg class='component-viz' id='component-viz-"+index+"'></svg>");
-    if (mastered==true){
-        $("#component-"+index).append("<div class='label-score' id='label-score-"+index+"'></>");
-        $("#label-score-"+index).append("<p class='label-mastered'>Mastered</p>");
-        $("#label-score-"+index).append("<div class='score-mastered'>"+score+"</div>");
-    }
-    else {
-        $("#component-"+index).append("<div class='label-score' id='label-score-"+index+"'></>");
-        $("#label-score-"+index).append("<p class='label-not-mastered'>Not Mastered</p>");
-        $("#label-score-"+index).append("<div class='score-not-mastered'>"+score+"</div>");
-    }
-    // $("#component-"+index).append("<svg id='svg-"+index+"'></svg>")
 
-    if (add_bottom_line == true) {
-        $("#component-"+index).css("border-bottom", "1px solid #D6D6D6");
-    }
+function createBarComponent(data){
+    data.forEach((element, i) => {
+        var index = i + 1;
+        $("#skill-set").append("<div class='component-container' id='component-"+index+"'></div>");
+        $("#component-"+index).append("<div class='title-viz' id='title-viz-"+index+"'></div>")
+        $("#title-viz-"+index).append("<p class='component-title'>"+element.skill+"</p>");
+        
+        var svg = d3.select("#title-viz-"+index)
+              .append("svg")
+              .attr("width", "240px")
+              .attr("height","21px")
+        
+        if (element.mastered==true){
+            $("#component-"+index).append("<div class='label-score' id='label-score-"+index+"'></>");
+            $("#label-score-"+index).append("<p class='label-mastered'>Mastered</p>");
+            $("#label-score-"+index).append("<div class='score-mastered'>"+element.score+"</div>");
+        }
+        else {
+            $("#component-"+index).append("<div class='label-score' id='label-score-"+index+"'></>");
+            $("#label-score-"+index).append("<p class='label-not-mastered'>Not Mastered</p>");
+            $("#label-score-"+index).append("<div class='score-not-mastered'>"+element.score+"</div>");
+        }
 
-    var svg = d3.select("#component-viz-"+index);
-    svg.append('rect')
-        .attr('x', 0)
-        .attr('y', 0)
-        .attr('width', '100%')
-        .attr('height', '100%')
-        .attr('fill', '#ccc');
+        if (index<data.length) {
+            $("#component-"+index).css("border-bottom", "1px solid #D6D6D6");
+        }
 
-    barComponentInteraction("#component-"+index, skill, mastered, score)
+        // add rect
+        var bg_rect = svg.append("rect")
+            .attr("width","100%")
+            .attr("height","9px")
+            .attr("rx", "4px")
+            .attr("ry", "4px")
+            .attr("x","0")
+            .attr("y","6px")
+        
+        //add distribution bar
+        var dist_rect = svg.append("rect")
+            .attr("width",(element.high-element.low)+"%")
+            .attr("height","9px")
+            .attr("rx", "4px")
+            .attr("ry", "4px")
+            .attr("x", element.low+"%" )
+            .attr("y","6px")
+        
+        //add score diamond
+        var diamond = svg.append('image')
+            .attr('width', 21)
+            .attr('height', 21)
+            .attr("x",(0.95*element.score)+"%")
+            .attr("y","0px")
+        
+        if (element.mastered==false){
+            bg_rect.attr("fill","#FFC5C2")
+            dist_rect.attr("fill", "#D60E0E")
+            diamond.attr('xlink:href', 'asset/red-diamond.png')
+        }
+        else{
+            bg_rect.attr("fill","#CCDFD7")
+            dist_rect.attr("fill", "#006038")
+            diamond.attr('xlink:href', 'asset/green-diamond.png')
+        }
+
+        barComponentInteraction("#component-"+index, element.skill, element.mastered, element.score, element.high, element.low)
+    })
 }
 
-createBarComponent(1, "Team-building", true, 89, true)
-createBarComponent(2, "Apply Principles", true, 88, true)
-createBarComponent(3, "Communication", true, 86, true)
-createBarComponent(4, "Ethics", true, 82, true)
-createBarComponent(5, "Critical Thinking", false, 79, false)
+createBarComponent(skill_data)
 
-function barComponentInteraction(id, skill, mastered, score){
+
+function barComponentInteraction(id, skill, mastered, score, high, low){
     $(id).mouseover(()=>{
         $(id).css("background","#FFFFFF");
         $(id).css("box-shadow","2px 4px 12px rgba(114, 114, 114, 0.25)");
@@ -205,6 +467,90 @@ function barComponentInteraction(id, skill, mastered, score){
                 $(".mastery-level-score").css("color","#8C1A11");
             }
         }
+
+        $("#highest-mastery-level-score").text(high + "%")
+        $("#lowest-mastery-level-score").text(low + "%")
+
+        $("#detail-svg").empty();
+
+        var svg = d3.select("#detail-svg")
+
+        // add rect
+        var bg_rect = svg.append("rect")
+            .attr("width","90%")
+            .attr("height","9px")
+            .attr("rx", "4px")
+            .attr("ry", "4px")
+            .attr("x","3%")
+            .attr("y","6px")
+        
+        //add distribution bar
+        var dist_rect = svg.append("rect")
+            .attr("width",(3+0.85*(high-low))+"%")
+            .attr("height","9px")
+            .attr("rx", "4px")
+            .attr("ry", "4px")
+            .attr("x", (3+0.85*low)+"%" )
+            .attr("y","6px")
+        
+        //add score diamond
+        var diamond = svg.append('image')
+            .attr('width', 21)
+            .attr('height', 21)
+            .attr("x",3+0.85*score+"%")
+            .attr("y","0px")
+        
+        if (mastered==false){
+            bg_rect.attr("fill","#FFC5C2")
+            dist_rect.attr("fill", "#D60E0E")
+            diamond.attr('xlink:href', 'asset/red-diamond.png')
+        }
+        else{
+            bg_rect.attr("fill","#CCDFD7")
+            dist_rect.attr("fill", "#006038")
+            diamond.attr('xlink:href', 'asset/green-diamond.png')
+        }
+
+        //add background text
+         svg.append("text")
+            .text('0')
+            .attr("x", "0")
+            .attr("y", "16px")
+            .style("font-size","12px")
+            .style("font-weight","400")
+            .style("fill", "#8C8888")
+      
+        svg.append("text")
+            .text('100')
+            .attr("x", "95%")
+            .attr("y", "16px")
+            .style("font-size","12px")
+            .style("font-weight","400")
+            .style("fill", "#8C8888")
+        
+        svg.append("text")
+            .text(score)
+            .attr("x", 3.6+0.85*score+"%")
+            .attr("y", "36px")
+            .style("font-size","12px")
+            .style("font-weight","400")
+            .style("fill", "#313131")
+        
+        svg.append("text")
+            .text(high)
+            .attr("x", 4.5+0.85*high+"%")
+            .attr("y", "36px")
+            .style("font-size","12px")
+            .style("font-weight","400")
+            .style("fill", "#313131")
+        
+        svg.append("text")
+            .text(low)
+            .attr("x", 2+0.85*low+"%")
+            .attr("y", "36px")
+            .style("font-size","12px")
+            .style("font-weight","400")
+            .style("fill", "#313131")
     })
 }
 
@@ -218,44 +564,38 @@ function setActivitySetHeight(){
     $('#activities-set').css('height', height);
 }
 
-function createActivityComponent(index, name, type, due_time, score,max_score){
+function createActivityComponent(data){
+    data.forEach((element,i) => {
+        var index = i + 1;
+        $("#activities-set").append("<div class='activity-component' id='activity-component-"+index+"'></div>")
+        $("#activity-component-"+index).append("<div class='icon-type-name' id='icon-type-name-"+index+"'></div>")
 
+        activityComponentInteraction("#activity-component-"+index, element.name, element.type, element.score, element.max_score, element.high, element.low);
 
-    $("#activities-set").append("<div class='activity-component' id='activity-component-"+index+"'></div>")
-    $("#activity-component-"+index).append("<div class='icon-type-name' id='icon-type-name-"+index+"'></div>")
+        if (element.type == "Knowledge Check") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/knowledge-check.png'>") }
+        if (element.type == "Practice Activity") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/practice-activity.png'>") }
+        if (element.type == "Discussion") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/discussion.png'>") }
+        if (element.type == "Reflection") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/reflection.png'>") }
 
-    activityComponentInteraction("#activity-component-"+index, name, type);
+        $("#icon-type-name-"+index).append("<div class='type-name' id='type-name-"+index+"'></div>")
+        $("#type-name-"+index).append("<div class='activity-type' id='type-"+index+"'>"+element.type+"</div>")
 
-    if (type == "Knowledge Check") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/knowledge-check.png'>") }
-    if (type == "Practice Activity") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/practice-activity.png'>") }
-    if (type == "Discussion") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/discussion.png'>") }
-    if (type == "Reflection") { $('#icon-type-name-'+index).append("<img class='activity-icon' src='/asset/icon/reflection.png'>") }
+        if (element.type == "Knowledge Check") { $("#type-"+index).css("color", "#4A2E5C")}
+        if (element.type == "Practice Activity") { $("#type-"+index).css("color", "#A5892B")}
+        if (element.type == "Discussion") { $("#type-"+index).css("color", "#006038")}
+        if (element.type == "Reflection") { $("#type-"+index).css("color", "#B14E46")}
 
-    $("#icon-type-name-"+index).append("<div class='type-name' id='type-name-"+index+"'></div>")
-    $("#type-name-"+index).append("<div class='activity-type' id='type-"+index+"'>"+type+"</div>")
+        $("#type-name-"+index).append("<div class='activity-name' id='name-"+index+"'>"+element.name+"</div>")
 
-    if (type == "Knowledge Check") { $("#type-"+index).css("color", "#4A2E5C")}
-    if (type == "Practice Activity") { $("#type-"+index).css("color", "#A5892B")}
-    if (type == "Discussion") { $("#type-"+index).css("color", "#006038")}
-    if (type == "Reflection") { $("#type-"+index).css("color", "#B14E46")}
-
-    $("#type-name-"+index).append("<div class='activity-name' id='name-"+index+"'>"+name+"</div>")
-
-    $("#activity-component-"+index).append("<p class='activity-time' id='time-"+index+"'>"+due_time+"</p>")
-    $("#activity-component-"+index).append("<p class='activity-score' id='score-"+index+"'>"+score+"/"+max_score+"</p>")
+        $("#activity-component-"+index).append("<p class='activity-time' id='time-"+index+"'>"+element.due_time+"</p>")
+        $("#activity-component-"+index).append("<p class='activity-score' id='score-"+index+"'>"+element.score+"/"+element.max_score+"</p>")
+    })
 }
 
-createActivityComponent(1, "The Acquisition Life Cycle", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(2, "Effective Written Communication", "Practice Activity", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(3, "Researching Basic Contracting Statutes", "Practice Activity", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(4, "Incentives and Motivation", "Discussion", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(5, "Acquisition Phases", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(6, "Authority", "Knowledge Check", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(7, "FAR Citations", "Practice Activity", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(8, "Acquisition Phases in Your Organization", "Discussion", "Jul 3 2022 by 7:59pm", 9.75, 10)
-createActivityComponent(9, "FAR", "Reflection", "Jul 3 2022 by 7:59pm", 9.75, 10)
+createActivityComponent(activity_data)
 
-function activityComponentInteraction(id, name, type){
+
+function activityComponentInteraction(id, name, type, score, max_score, high, low){
     $(id).mouseover(()=>{
         $(id).css("background","#FFFFFF");
         $(id).css("box-shadow","2px 4px 12px rgba(114, 114, 114, 0.25)");
@@ -278,6 +618,8 @@ function activityComponentInteraction(id, name, type){
             $("#detail-content-practice-activity").show();
             $("#detail-side-practice-activity").show();
 
+            //$("#detail-content-practice-activity").height($(window).height() - $("#detail-title").offset().top - $("#detail-title").height())
+
             updateActivityDetailPA(select_skill, name, rubrics, examples);
             current_page = "skill-mastery-activity-detail";
         }
@@ -293,6 +635,65 @@ function activityComponentInteraction(id, name, type){
             updateActivityDetailKC(select_skill, name);
             current_page = "skill-mastery-activity-detail";
         }
+
+        $("#detail-title-bar").empty();
+        var svg = d3.select("#detail-title-bar")
+                        .attr("width", "310px")
+                        .attr("height", "44px")
+        
+        // add rect
+        var bg_rect = svg.append("rect")
+            .attr("width","85%")
+            .attr("height","9px")
+            .attr("rx", "4px")
+            .attr("ry", "4px")
+            .attr("x","5%")
+            .attr("y","25px")
+            .attr("fill","#F2E2E1")
+        
+        //add distribution bar
+        var dist_rect = svg.append("rect")
+            .attr("width",(5+0.8*(high-low)/max_score*100)+"%")
+            .attr("height","9px")
+            .attr("rx", "4px")
+            .attr("ry", "4px")
+            .attr("x", (3+0.85*low/max_score*100)+"%" )
+            .attr("y","25px")
+            .attr("fill", "#8C1A11")
+        
+        //add score mark
+        var mark = svg.append('image')
+            .attr('width', 21)
+            .attr('height', 21)
+            .attr("x",5+0.8*score/max_score*100+"%")
+            .attr("y","19px")
+            .attr('xlink:href', 'asset/round-mark.png')
+        
+        //add text
+        svg.append("text")
+            .text('0')
+            .attr("x", "0")
+            .attr("y", "35px")
+            .style("font-size","12px")
+            .style("font-weight","400")
+            .style("fill", "#8C8888")
+      
+        svg.append("text")
+            .text(max_score)
+            .attr("x", "95%")
+            .attr("y", "35px")
+            .style("font-size","12px")
+            .style("font-weight","400")
+            .style("fill", "#8C8888")
+        
+        svg.append("text")
+            .text("avg: "+ score)
+            .attr("x", 3+0.75*score/max_score*100+"%")
+            .attr("y", "13px")
+            .style("font-size","18px")
+            .style("font-weight","600")
+            .style("fill", "#8C1A11")
+        
     })   
 }
 
@@ -421,21 +822,25 @@ function expandOrCollapseKC(index, id, src){
     if (img == "up-arrow.png"){
         $("#"+id).attr("src", "asset/down-arrow.png");
         $("#question-component-bottom-"+index).hide();
+        $("#question-component-top-"+index).css("border-left", "")
     }
     else{
         $("#"+id).attr("src", "asset/up-arrow.png");
         $("#question-component-bottom-"+index).show();
+        $("#question-component-top-"+index).css("border-left", "3px solid #8C1A11")
     }
 }
 
 $("#knowledge-check-expand-all").click(()=>{
     $(".knowledge-check-arrow").attr("src", "asset/up-arrow.png");
     $(".question-component-bottom").show();
+    $(".question-component-top").css("border-left", "3px solid #8C1A11")
 })
 
 $("#knowledge-check-collapse-all").click(()=>{
     $(".knowledge-check-arrow").attr("src", "asset/down-arrow.png");
     $(".question-component-bottom").hide();
+    $(".question-component-top").css("border-left", "")
 })
 
 function expand_annotation_kc(id, src, content_id){
@@ -666,11 +1071,6 @@ function addImpactActivityComponent(index, data){
         $("#impact-component-insights-list-"+index).append("<li>"+element+"</li>")
     })
 
-    $(".impact-component-insights").width(Math.min(281,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
-    $( window ).resize(function() {
-        $(".impact-component-insights").width(Math.min(281,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
-    })
-
     $("#impact-component-bottom-"+index).hide();
 }
 
@@ -689,12 +1089,13 @@ function expandOrCollapse(index, id, src){
     if (img == "up-arrow.png"){
         $("#"+id).attr("src", "asset/down-arrow.png");
         $("#impact-component-bottom-"+index).show();
+        $("#impact-component-top-"+index).css("border-left","3px solid #8C1A11");
     }
     else{
         $("#"+id).attr("src", "asset/up-arrow.png");
         $("#impact-component-bottom-"+index).hide();
+        $("#impact-component-top-"+index).css("border-left","");
     }
-    $(".impact-component-insights").width(Math.min(281,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
 }
 
 
@@ -702,12 +1103,14 @@ function expandOrCollapse(index, id, src){
 $("#expand-all").click(()=>{
     $(".impact-component-bottom").show();
     $(".impact-component-control").attr("src", "asset/down-arrow.png");
+    $(".impact-component-top").css("border-left","3px solid #8C1A11");
     state="expand";
 })
 
 $("#collapse-all").click(()=>{
     $(".impact-component-bottom").hide();
     $(".impact-component-control").attr("src", "asset/up-arrow.png");
+    $(".impact-component-top").css("border-left","");
     state="collapse";
 })
 
@@ -771,80 +1174,6 @@ $("#sort-down").click(()=>{
 })
 
 
-//impact skill
-var impact_skill_data = [
-    {
-        name: "Communication",
-        total: 106,
-        activity:[
-            {name: "Discussion Board", score: 34 },
-            {name: "Practice Activity", score: 28},
-            {name: "Reflection", score: 26},
-            {name: "Knowledge Check", score: 18},
-        ],
-        insights:[
-            "The overall instruction is most effective on communication skill cultivating.",
-            "Discussion board is most effective for cultivating the communication skill."
-        ]
-    },
-    {
-        name: "Team-building",
-        total: 94,
-        activity:[
-            {name: "Discussion Board", score: 26 },
-            {name: "Practice Activity", score: 24},
-            {name: "Reflection", score: 23},
-            {name: "Knowledge Check", score: 21},
-        ],
-        insights:[
-            "The overall instruction is most effective on communication skill cultivating.",
-            "Discussion board is most effective for cultivating the communication skill."
-        ]
-    },
-    {
-        name: "Ethics",
-        total: 89,
-        activity:[
-            {name: "Discussion Board", score: 30 },
-            {name: "Practice Activity", score: 22},
-            {name: "Reflection", score: 19},
-            {name: "Knowledge Check", score: 18},
-        ],
-        insights:[
-            "The overall instruction is most effective on communication skill cultivating.",
-            "Discussion board is most effective for cultivating the communication skill."
-        ]
-    },
-    {
-        name: "Apply Principles",
-        total: 84,
-        activity:[
-            {name: "Discussion Board", score: 29 },
-            {name: "Practice Activity", score: 21},
-            {name: "Reflection", score: 20},
-            {name: "Knowledge Check", score: 14},
-        ],
-        insights:[
-            "The overall instruction is most effective on communication skill cultivating.",
-            "Discussion board is most effective for cultivating the communication skill."
-        ]
-    },
-    {
-        name: "Critical Thinking",
-        total: 79,
-        activity:[
-            {name: "Discussion Board", score: 26 },
-            {name: "Practice Activity", score: 24},
-            {name: "Reflection", score: 19},
-            {name: "Knowledge Check", score: 10},
-        ],
-        insights:[
-            "The overall instruction is most effective on communication skill cultivating.",
-            "Discussion board is most effective for cultivating the communication skill."
-        ]
-    }
-]
-
 function addImpactSkillComponent(index, data){
     $("#activity-set").append("<div id='impact-component-"+index+"'></div>");
     $("#impact-component-"+index).append("<div class='impact-component-top' id='impact-component-top-"+index+"'></div>")
@@ -857,10 +1186,54 @@ function addImpactSkillComponent(index, data){
 
     $("#impact-component-skills-"+index).append("<div class='impact-component-skills-activity-svg' id='impact-component-skills-activity-svg-"+index+"'></div>")
     $("#impact-component-skills-activity-svg-"+index).append("<div class='impact-component-activity' id='impact-component-activity-"+index+"'></div>")
-    $("#impact-component-skills-activity-svg-"+index).append("<div class='impact-component-svg' id='impact-component-svg-"+index+"'></div>")
+    
+    var colorList=["#8C1A11", "rgba(140, 26, 17, 0.6)", "rgba(140, 26, 17, 0.4)", "rgba(140, 26, 17, 0.2)"];
+    
+    // $("#impact-component-skills-activity-svg-"+index).empty();
+    var svg = d3.select("#impact-component-skills-activity-svg-"+index)
+                .append("svg")
+                .attr("width", 150)
+                .attr("height", 150)
+                .append("g")
+            .attr("transform", "translate(" + 75 + "," + 75 + ")");
+    
+    var color = d3.scaleOrdinal()
+            .domain(data[index-1].activity)
+            .range(colorList)
+    
+    var pie = d3.pie()
+                .value(function(d) {return d.value.score; })
+    var data_ready = pie(d3.entries(data[index-1].activity))
+
+    var arcGenerator = d3.arc()
+        .innerRadius(0)
+        .outerRadius(75)
+
+    svg.selectAll('mySlices')
+        .data(data_ready)
+        .enter()
+        .append('path')
+            .attr('d', arcGenerator)
+            .attr('fill', function(d,i){ return(colorList[i]) })
+
+    // add text
+    svg.selectAll('mySlices')
+        .data(data_ready)
+        .enter()
+        .append('text')
+        .text(function(d){ return d.value + "/" + data[index-1].total})
+        .attr("transform", function(d) { 
+            return "translate(" + arcGenerator.centroid(d)[0]*1.25 +"," +arcGenerator.centroid(d)[1]*1.25 + ")";  
+        })
+        .style("text-anchor", "middle")
+        .style("font-size", 12)
+        .style("fill", function(d,i){
+            if (i==3){return "#000"}
+            else{return "#fff"}
+        })
 
     var total=0;
-    var colorList=["#8C1A11", "rgba(140, 26, 17, 0.6)", "rgba(140, 26, 17, 0.4)", "rgba(140, 26, 17, 0.2)"];
+
     data[index-1].activity.forEach((element,i) => {
         $("#impact-component-activity-"+index).append("<div class='color-name-score' id='color-name-score-"+index+"-"+i+"'></div>")
         $("#color-name-score-"+index+"-"+i).append("<div class='color-name' id='color-name-"+index+"-"+i+"'></div>")
@@ -883,12 +1256,6 @@ function addImpactSkillComponent(index, data){
         $("#impact-component-insights-list-"+index).append("<li>"+element+"</li>")
     })
 
-    $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
-    $(".impact-component-insights").height(190)
-    $( window ).resize(function() {
-        $(".impact-component-insights").width(Math.min(321,$(".impact-component-bottom").width()-$(".impact-component-skills").width()-68))
-        $(".impact-component-insights").height($("#impact-component-skills").height())
-    })
 
     $("#impact-component-bottom-"+index).hide();
 }

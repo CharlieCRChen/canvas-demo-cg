@@ -17,26 +17,26 @@ var mastery_level_data = [
     },
     {
         name: "Ethics",
-        score: 89,
+        score: 84,
         low:75,
         high:93,
-        avg: 91,
+        avg: 86,
         state: "Mastered"
     },
     {
         name: "Apply Principles",
         score: 86,
         low:69,
-        high:91,
+        high:95,
         avg: 88,
         state: "Mastered"
     },
     {
         name: "Critical Thinking",
-        score: 82,
+        score: 77,
         low:65,
         high:88,
-        avg: 85,
+        avg: 79,
         state: "Need more practice"
     },
 ]
