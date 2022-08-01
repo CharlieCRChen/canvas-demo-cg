@@ -2,11 +2,11 @@ body {
     font-family: 'Lato';
     font-style: normal;
     margin:0;
-    /* height: 100%;
-    overflow: hidden; */
+    height: 100%;
+    overflow: hidden;
     padding: 1.25rem 1.25rem 0 1.25rem;
 
-    min-width: 1014px;
+    min-width: 1240px;
 }
 
 #skill-side-main {
@@ -46,12 +46,24 @@ body {
     text-transform: uppercase;
     color: #313131;
     margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
 }
 
-#nav-container img{
+#nav-container .invisable-img{
     margin:0;
     width: 6px;
     display: none;
+}
+
+.nav-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
 }
 
 #nav-skill{
@@ -293,7 +305,7 @@ body {
 
 #skill-detail-bar{
     margin:12px 0;
-    background-color:#ccc;
+    /* background-color:#ccc; */
     width: 100%;
     height: 209px;
 }
@@ -629,7 +641,7 @@ body {
     'body body body body body body body body body side side side';
     grid-row-gap: 18px;
     grid-column-gap: 20px;
-    padding: 24px 0;
+    padding: 24px 0 0 0;
 }
 
 #list-activity-detail-header{
@@ -976,3 +988,92 @@ body {
     height: 24px;
     cursor: pointer;
 }
+
+.bar-tooltip {	
+    position: absolute;			
+    text-align: center;	
+    width: 135px;					
+    height: 45px;					
+    padding: 4px 0 2px 0;
+    color: white;					
+    background: #3C3C3C;	
+    border: 0px;		
+    border-radius: 4px;			
+    pointer-events: none;	
+    
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar-tooltip p{
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 2px 0 0 0 ;
+    padding:0;
+}
+
+#skill-detail-activity-set{
+    overflow: scroll;
+}
+
+#skill-detail-right-coming-soon{
+    overflow: scroll;
+}
+
+#list-activity-detail-body-practice-activity{
+    overflow: scroll;
+}
+
+#knowledge-check-question-set{
+    overflow: scroll;
+}
+
+.main-tooltip{
+    margin:0;
+    width: 18px;
+    height: 18px;
+}
+
+/* tooltip  */
+.tooltip-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 10px;
+    gap: 12px;
+
+    position: absolute;
+    width: 380px;
+    /* height: 96px; */
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 6px rgba(104, 104, 104, 0.15);
+    border-radius: 8px;
+}
+
+.tooltip-title{
+    font-weight: 500;
+    font-size: 18px;
+    color: #8C1A11;
+}
+
+.tooltip-body{
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+#tooltip-content-skill{
+    left:110px;
+    top: 10px;
+}
+
+#tooltip-content-mastery{
+    left:250px;
+    top: 70px;
+}
+

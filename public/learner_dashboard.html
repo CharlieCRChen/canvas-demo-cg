@@ -11,17 +11,25 @@
 
     <body>
         <div id="nav-container">
-            <div class='nav-text' id="nav-main">Skills</div>
-            <img id='nav-arrow-1' src='asset/arrow.png'>
+            <div class='nav-text'>
+                <div id="nav-main">Skills</div>
+                <img class='main-tooltip' id="tooltip-skill" src="asset/tooltip.png">
+            </div>
+            
+            <img class='invisable-img' id='nav-arrow-1' src='asset/arrow.png'>
             <div class='nav-text' id="nav-skill">Communication</div>
-            <img id='nav-arrow-2' src='asset/arrow.png'>
+            <img class='invisable-img' id='nav-arrow-2' src='asset/arrow.png'>
             <div class='nav-text' id="nav-activity-detail">Activity Detail</div>
         </div>
 
         <div id="skill-side-main"> 
             <!-- move the item -->
             <div id="skill-container">
-                <div class="main-title">Your Mastery level</div>
+                <div class="main-title">
+                    <div>Your Mastery level</div>
+                    <img class='main-tooltip' id="tooltip-mastery-level" src="asset/tooltip.png">
+                </div>
+                
                 <div id="legend-set">
                     <div class="legend-component">
                         <img id='legend-1' src="asset/mastery-level-icon.png">
@@ -74,7 +82,7 @@
                     </div>
                 </div>
 
-                <div id="skill-detail-bar"></div>
+                <svg id="skill-detail-bar"></svg>
 
                 <div id="skill-detail-activity-title">
                     <div id="skill-detail-activity-title-1">Listed Activities</div>
@@ -229,6 +237,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class='tooltip-content' id="tooltip-content-skill">
+            <div class="tooltip-title">What are the skills?</div>
+            <div class="tooltip-body">Listed are the essential professional skills that are required in NCMA competency.</div>
+        </div>
+        <div class='tooltip-content' id="tooltip-content-mastery">
+            <div class="tooltip-title">Where does the score come from?</div>
+            <div class="tooltip-body">The scores are predicted from all the past activity performances</div>
         </div>
 
         <script src="public/learner_dashboard.js"></script>
